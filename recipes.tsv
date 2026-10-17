@@ -1,0 +1,101 @@
+# Author: Sandeep Belgavi. category | name | bounded task | evidence fields
+Support|Ticket triage|Decide whether the ticket contains enough context for the support queue described in the routing policy|ticket,queue_policy
+Support|Refund evidence reviewer|Check whether the supplied order evidence supports drafting a refund recommendation under the supplied policy; never authorize a payment|order_evidence,refund_policy
+Support|Incident update reviewer|Check whether a proposed incident update is supported by the current incident record|draft_update,incident_record
+Support|Escalation router|Determine whether a customer case meets the written escalation criteria|case_summary,escalation_policy
+Support|Duplicate ticket checker|Determine whether two tickets describe the same user-visible problem|ticket_pair,duplicate_rules
+Support|Knowledge answer reviewer|Check whether the draft answer is supported by the cited help article|draft_answer,help_article
+Support|Handoff completeness checker|Check whether a shift handoff includes the fields required by the handoff checklist|handoff,handoff_checklist
+Support|SLA evidence assessor|Classify whether recorded milestones provide sufficient evidence for an SLA review; do not calculate elapsed time|milestone_summary,sla_review_criteria
+Support|Customer sentiment router|Identify whether a support conversation requires empathetic human follow-up according to the service rubric|conversation,service_rubric
+Support|Resolution verifier|Determine whether the supplied verification record supports marking a ticket resolved|verification_record,resolution_criteria
+Security|Prompt injection reviewer|Assess whether retrieved text attempts to redirect an assistant outside the authorized task|retrieved_text,authorized_task
+Security|Tool permission reviewer|Check whether a proposed tool operation fits the documented permission scope; code must still enforce permissions|proposed_operation,permission_summary
+Security|Secret exposure reviewer|Flag contextual signs of sensitive credentials in a redacted sample; deterministic scanning remains necessary|redacted_sample,handling_policy
+Security|Phishing evidence triage|Assess suspicious message indicators for analyst review without contacting links or senders|message_summary,indicator_rubric
+Security|Access review assistant|Review a summarized role request against an access review rubric; do not grant access|role_request,review_policy
+Security|Audit gap finder|Identify missing evidence in an audit trail summary relative to the required controls|audit_summary,control_checklist
+Security|Dependency alert router|Route a dependency advisory for developer review using affected-component context|advisory_summary,component_context
+Security|Data egress reviewer|Assess whether a proposed outbound data transfer conflicts with its classification rules|transfer_summary,classification_rules
+Security|Abuse report triage|Assess whether a platform abuse report contains enough evidence for a specialist review|abuse_report,moderation_policy
+Security|Fraud case prioritizer|Recommend human review priority from supplied transaction indicators; never freeze accounts or make financial determinations|indicator_summary,review_rubric
+Cloud|Cloud Run rollout reviewer|Check release evidence against a Cloud Run rollout checklist|release_evidence,rollout_checklist
+Cloud|Kubernetes change reviewer|Assess a proposed Kubernetes change against declared operational constraints|change_summary,operational_constraints
+Cloud|Terraform plan reviewer|Identify concerning changes in a summarized Terraform plan using the infrastructure policy|plan_summary,infrastructure_policy
+Cloud|Cost anomaly explainer|Determine whether known usage changes plausibly explain a precomputed cost anomaly|cost_facts,usage_changes
+Cloud|Capacity review assistant|Assess a capacity proposal against supplied workload assumptions; arithmetic remains in code|capacity_proposal,workload_assumptions
+Cloud|Failover readiness checker|Check whether recorded readiness evidence covers the documented failover prerequisites|readiness_evidence,failover_prerequisites
+Cloud|Backup evidence reviewer|Assess whether a backup verification report supports the stated recovery objective|backup_report,recovery_criteria
+Cloud|Network rule reviewer|Identify a mismatch between a proposed network rule and intended traffic scope|rule_summary,traffic_scope
+Cloud|Service ownership router|Determine whether a service incident can be routed using the supplied ownership map|incident_summary,ownership_map
+Cloud|Deployment rollback advisor|Assess whether observed rollout symptoms meet the documented criteria to recommend rollback|rollout_symptoms,rollback_criteria
+Data|Schema migration reviewer|Check a proposed schema migration against compatibility requirements|migration_summary,compatibility_rules
+Data|Cassandra partition reviewer|Assess whether a Cassandra access pattern aligns with the proposed partition design|access_pattern,partition_design
+Data|Data quality triage|Classify a quality anomaly using a supplied data contract and precomputed statistics|quality_summary,data_contract
+Data|PII minimization planner|Identify which described fields are unnecessary for an explicitly bounded task|field_descriptions,task_scope
+Data|Retention review assistant|Check whether a proposed retention change matches the supplied retention policy|retention_proposal,retention_policy
+Data|Lineage gap reviewer|Identify missing links in a summarized data lineage record|lineage_record,lineage_requirements
+Data|Query intent router|Choose whether a requested analysis is covered by the approved read-only query inventory|analysis_request,query_inventory
+Data|Index recommendation reviewer|Assess an index proposal against supplied query evidence and operational tradeoffs|index_proposal,query_evidence
+Data|Streaming contract reviewer|Check a streaming event schema against consumer expectations|event_schema,consumer_requirements
+Data|Data export reviewer|Review export justification and requested fields against the supplied export policy|export_request,export_policy
+Development|Pull request scope reviewer|Assess whether a patch summary matches the stated issue scope|patch_summary,issue_scope
+Development|Test gap reviewer|Identify untested behaviors from a change summary and existing test inventory|change_summary,test_inventory
+Development|API compatibility reviewer|Assess a proposed API change against stated client contracts|api_change,client_contracts
+Development|Build failure router|Route a sanitized build failure using available build ownership and known failure categories|build_failure,build_routing_policy
+Development|Release note reviewer|Check release notes against verified merged changes|release_notes,merged_changes
+Development|Documentation drift checker|Assess whether a documentation excerpt conflicts with the supplied code contract|documentation_excerpt,code_contract
+Development|Code review prioritizer|Identify which patch areas deserve deeper human review under a code review rubric|patch_areas,review_rubric
+Development|Feature flag reviewer|Check whether a proposed feature flag lifecycle covers rollout and removal requirements|flag_plan,lifecycle_checklist
+Development|Dependency upgrade reviewer|Assess an upgrade proposal against a migration guide and affected usage|upgrade_proposal,migration_requirements
+Development|Reproducibility checker|Assess whether a bug report contains enough information for a controlled reproduction|bug_report,reproduction_checklist
+Research|Citation support checker|Check whether supplied source passages support the specific claim without fetching external information|claim,source_passages
+Research|Source relevance scorer|Assess whether a retrieved source addresses the bounded research question|research_question,source_excerpt
+Research|Conflicting evidence router|Determine whether supplied evidence conflicts enough to require explicit uncertainty in a draft|evidence_set,claim_scope
+Research|Experiment design reviewer|Identify missing controls in a proposed experiment using its evaluation objective|experiment_plan,evaluation_objective
+Research|Benchmark comparability checker|Assess whether two benchmark summaries use comparable tasks and measurement conditions|benchmark_pair,comparison_rules
+Research|Paper limitation reviewer|Check whether a summary preserves the limitations stated in the source excerpt|paper_summary,limitations_excerpt
+Research|Research question decomposer|Choose whether a research question can be answered by the supplied bounded subquestions|research_question,subquestion_plan
+Research|Evidence freshness reviewer|Assess whether the evidence dates and version notes require a refreshed source check; dates are precomputed|freshness_facts,update_policy
+Research|Dataset documentation reviewer|Check dataset documentation for the disclosures required by a collection checklist|dataset_documentation,disclosure_checklist
+Research|Editorial claim reviewer|Check an article draft's concrete claims against an evidence ledger|draft_claims,evidence_ledger
+Product|Feature request router|Determine which documented product area owns a feature request|feature_request,product_areas
+Product|User story readiness checker|Check whether a user story has observable acceptance criteria|user_story,readiness_checklist
+Product|Experiment rollout reviewer|Assess whether a product experiment includes the required stop conditions|experiment_brief,stop_condition_policy
+Product|Accessibility issue triage|Route an accessibility finding using its reproduction evidence and severity rubric|finding,severity_rubric
+Product|Onboarding friction reviewer|Assess an anonymized onboarding journey against completion requirements|journey_summary,onboarding_requirements
+Product|Pricing copy consistency checker|Check whether pricing copy matches the supplied plan entitlements; never invent prices|pricing_copy,plan_entitlements
+Product|Subscription entitlement reviewer|Identify inconsistencies between a described user experience and the declared subscription capabilities|experience_summary,entitlement_specification
+Product|Checkout failure router|Route a checkout error from sanitized evidence without processing payment details|checkout_error,routing_playbook
+Product|Cancellation flow reviewer|Check a cancellation journey against the declared product policy|journey_description,cancellation_policy
+Product|Feedback clustering reviewer|Assess whether proposed feedback groups preserve meaningful distinctions in the supplied examples|feedback_examples,proposed_groups
+Operations|Runbook readiness checker|Check whether a runbook includes prerequisites, stop conditions and recovery steps|runbook,readiness_standard
+Operations|Change approval reviewer|Assess whether a change request contains required review evidence without granting approval|change_request,approval_checklist
+Operations|Incident timeline reviewer|Identify unexplained gaps in a preordered incident timeline|ordered_timeline,timeline_requirements
+Operations|Postmortem action reviewer|Check whether follow-up actions address the documented contributing factors|action_items,contributing_factors
+Operations|Alert deduplication reviewer|Assess whether alerts likely describe one incident based on supplied correlation evidence|alert_group,correlation_evidence
+Operations|Maintenance notice reviewer|Check whether a maintenance notice accurately reflects the approved maintenance plan|notice,maintenance_plan
+Operations|Vendor incident router|Determine whether a reported disruption maps to a listed external dependency|disruption_summary,dependency_inventory
+Operations|Service health reviewer|Assess an operator-written service summary against precomputed health indicators|service_summary,health_indicators
+Operations|Recovery validation reviewer|Check whether recovery tests cover the failure mode recorded in the incident|recovery_tests,failure_record
+Operations|Operational handoff router|Route an operational question using documented ownership and escalation boundaries|operational_question,ownership_policy
+Learning|Career skill gap coach|Suggest whether a learner should review prerequisites using their self-assessment and chosen learning goal; do not rank job candidates|self_assessment,learning_goal
+Learning|System design feedback agent|Review a learner's architecture against stated workload requirements|learner_architecture,workload_requirements
+Learning|Agent design feedback agent|Check whether a learner's agent design defines tool permissions and failure paths|agent_design,exercise_rubric
+Learning|Fine tuning readiness coach|Review a proposed training dataset against the exercise's labeling and split requirements|dataset_plan,training_rubric
+Learning|Interview practice reviewer|Evaluate a practice answer against a published exercise rubric without making hiring decisions|practice_answer,exercise_rubric
+Learning|Debugging hint selector|Determine whether a learner's evidence supports the next permitted hint level|debugging_evidence,hint_policy
+Learning|Lab submission reviewer|Check whether a lab report includes the evidence requested by its assignment|lab_report,assignment_requirements
+Learning|Study plan feasibility reviewer|Assess a study plan against the learner's stated time constraints and prerequisites|study_plan,learner_constraints
+Learning|Concept misconception checker|Identify whether an explanation conflicts with the supplied reference definition|learner_explanation,reference_definition
+Learning|Learning resource router|Choose whether a resource matches a learner's current prerequisites and target concept|resource_summary,learner_goal
+Agent systems|Model routing reviewer|Assess whether a model choice matches the declared latency, privacy and capability requirements|model_choice,workload_constraints
+Agent systems|Memory write reviewer|Check whether proposed memory is useful and appropriate under the supplied memory policy|memory_candidate,memory_policy
+Agent systems|Retrieval sufficiency gate|Determine whether retrieved passages support answering the bounded user question|user_question,retrieved_passages
+Agent systems|Tool result verifier|Assess whether a tool result satisfies the requested observation contract|tool_result,observation_contract
+Agent systems|Human approval packet reviewer|Check that an approval packet describes the exact proposed effect and target|approval_packet,effect_specification
+Agent systems|Agent loop stop reviewer|Recommend stopping or escalating when progress evidence matches configured loop limits|progress_summary,stop_policy
+Agent systems|Context pruning reviewer|Assess which proposed context omissions would remove evidence needed for the active task|pruning_proposal,task_evidence_requirements
+Agent systems|Multi agent handoff reviewer|Check whether a handoff preserves task scope, evidence and unresolved questions|handoff_packet,receiver_contract
+Agent systems|Output delivery reviewer|Assess whether an answer satisfies its output contract and cites supplied evidence|candidate_answer,output_contract
+Agent systems|Release evaluation reviewer|Check whether an agent release report covers required failure cases and measured outcomes|evaluation_report,release_gate

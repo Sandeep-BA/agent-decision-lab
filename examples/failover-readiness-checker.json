@@ -1,0 +1,4 @@
+{
+  "readiness_evidence": "Replace this synthetic readiness_evidence with reviewed evidence for Failover readiness checker",
+  "failover_prerequisites": "Replace this synthetic failover_prerequisites with reviewed evidence for Failover readiness checker"
+}

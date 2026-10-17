@@ -1,0 +1,22 @@
+# Author: Sandeep Belgavi
+name: Java agent contracts
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['17', '21']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+      - run: python scripts/build_recipes.py
+      - run: git diff --exit-code -- src/main/resources examples CATALOG.md
+      - run: mvn -B verify
+      - run: java -jar target/agent-decision-lab.jar ticket-triage
