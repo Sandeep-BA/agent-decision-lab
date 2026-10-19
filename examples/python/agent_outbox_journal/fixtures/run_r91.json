@@ -1,0 +1,9 @@
+{
+  "run_id": "R-91",
+  "note": "Synthetic plan proposed by a fixed agent policy for a support refund. Author: Sandeep Belgavi.",
+  "steps": [
+    {"index": 1, "tool": "lookup_order", "order_id": "7731"},
+    {"index": 2, "tool": "issue_refund", "order_id": "7731", "amount": 40},
+    {"index": 3, "tool": "notify", "channel": "ledger"}
+  ]
+}

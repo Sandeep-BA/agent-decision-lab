@@ -1,0 +1,9 @@
+{
+  "run_id": "P-204",
+  "note": "Synthetic recorded history for a procurement run that drafted an order on Monday and blocked waiting for approval. Author: Sandeep Belgavi.",
+  "request": {"item": "rack servers", "budget": 8000},
+  "history": [
+    {"kind": "activity", "name": "draft_order", "result": {"supplier": "B", "amount": 7200, "rationale": "recorded on Monday"}},
+    {"kind": "blocked", "name": "approval"}
+  ]
+}

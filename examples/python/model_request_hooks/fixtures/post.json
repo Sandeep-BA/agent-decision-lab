@@ -1,0 +1,11 @@
+{
+  "hook_event_name": "PostModelRequest",
+  "session_id": "s-synthetic-1",
+  "turn_id": "t-7",
+  "cwd": "/workspace/example",
+  "transcript_path": null,
+  "model": "example-model-1",
+  "status": "completed",
+  "error": null,
+  "token_usage": {"input_tokens": 1200, "output_tokens": 85}
+}
