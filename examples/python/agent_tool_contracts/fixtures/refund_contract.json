@@ -1,0 +1,25 @@
+{
+  "author": "Sandeep Belgavi",
+  "note": "Synthetic contract for the refund_order tool. Interactions imitate calls recorded from a staging agent; no real customer data.",
+  "tool": {
+    "name": "refund_order",
+    "description": "Refund part or all of a captured payment for one order. Returns the refund id and the amount still refundable.",
+    "inputSchema": {
+      "type": "object",
+      "required": ["order_id", "amount", "reason", "idempotency_key"],
+      "properties": {
+        "order_id": {"type": "string"},
+        "amount": {"type": "integer", "minimum": 1},
+        "reason": {"type": "string"},
+        "idempotency_key": {"type": "string"}
+      }
+    }
+  },
+  "interactions": [
+    {"id": "i1-full-flow", "arguments": {"order_id": "o-1", "amount": 40, "reason": "late delivery", "idempotency_key": "o-1:conv-7"}, "fields_read_next": ["refund_id", "remaining_refundable"]},
+    {"id": "i2-retry-same-key", "arguments": {"order_id": "o-1", "amount": 40, "reason": "late delivery", "idempotency_key": "o-1:conv-7"}, "fields_read_next": ["refund_id"]},
+    {"id": "i3-second-order", "arguments": {"order_id": "o-2", "amount": 25, "reason": "damaged", "idempotency_key": "o-2:conv-9"}, "fields_read_next": ["remaining_refundable"]},
+    {"id": "i4-negative-amount-rejected", "arguments": {"order_id": "o-2", "amount": -10, "reason": "reversal", "idempotency_key": "o-2:conv-9b"}, "fields_read_next": ["error"], "expect_error": true},
+    {"id": "i5-over-capture-rejected", "arguments": {"order_id": "o-2", "amount": 500, "reason": "goodwill", "idempotency_key": "o-2:conv-10"}, "fields_read_next": ["error"], "expect_error": true}
+  ]
+}

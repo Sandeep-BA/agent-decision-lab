@@ -1,0 +1,11 @@
+{
+  "author": "Sandeep Belgavi",
+  "note": "Synthetic traffic definitions. Runs are generated from these with a fixed seed; each run carries a segment and a judged pass/fail label. No real traffic.",
+  "reference": {"mix": {"billing": 0.5, "account": 0.3, "technical": 0.2}, "rates": {"billing": 0.92, "account": 0.85, "technical": 0.70}},
+  "weeks": {
+    "unchanged": {"mix": {"billing": 0.5, "account": 0.3, "technical": 0.2}, "rates": {"billing": 0.92, "account": 0.85, "technical": 0.70}},
+    "mix-shift": {"mix": {"billing": 0.3, "account": 0.3, "technical": 0.4}, "rates": {"billing": 0.92, "account": 0.85, "technical": 0.70}},
+    "hidden-regression": {"mix": {"billing": 0.7, "account": 0.2, "technical": 0.1}, "rates": {"billing": 0.92, "account": 0.85, "technical": 0.55}}
+  },
+  "runs_per_week": 20000
+}

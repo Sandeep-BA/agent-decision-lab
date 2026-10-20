@@ -1,0 +1,16 @@
+{
+  "279b1bb82b55f09a": {
+    "tool_call": {
+      "name": "refund_order",
+      "arguments": {
+        "order_id": "o-1",
+        "amount": 40,
+        "reason": "late delivery",
+        "idempotency_key": "o-1:conv-7"
+      }
+    }
+  },
+  "e5a65bf79bb8cc85": {
+    "text": "Refunded 40. You can still claim up to 60 on this order."
+  }
+}
