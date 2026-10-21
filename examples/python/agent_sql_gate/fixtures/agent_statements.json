@@ -1,0 +1,12 @@
+[
+  {"name": "totals for the tenant", "sql": "SELECT count(*), sum(amount_cents) FROM refunds_view"},
+  {"name": "group by reason", "sql": "SELECT reason, count(*) FROM refunds_view GROUP BY reason ORDER BY reason"},
+  {"name": "base table", "sql": "SELECT * FROM refunds"},
+  {"name": "another table", "sql": "SELECT card_last4 FROM payments"},
+  {"name": "write", "sql": "UPDATE refunds SET amount_cents = 0"},
+  {"name": "attach", "sql": "ATTACH DATABASE 'other.db' AS other"},
+  {"name": "two statements", "sql": "SELECT 1; DELETE FROM refunds"},
+  {"name": "extension loading", "sql": "SELECT load_extension('evil')"},
+  {"name": "CTE named like the view", "sql": "WITH refunds_view AS (SELECT * FROM refunds) SELECT sum(amount_cents) FROM refunds_view"},
+  {"name": "runaway recursive CTE", "sql": "WITH RECURSIVE c(x) AS (SELECT 1 UNION ALL SELECT x + 1 FROM c WHERE x < 10000000) SELECT count(*) FROM c"}
+]

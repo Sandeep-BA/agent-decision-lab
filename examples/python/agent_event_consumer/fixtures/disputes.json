@@ -1,0 +1,180 @@
+{
+ "topic": "disputes",
+ "note": "Synthetic. Author: Sandeep Belgavi. P1 offset 2 is a poison event.",
+ "partitions": [
+  [
+   {
+    "key": "acct-a",
+    "payload": {
+     "dispute": "D-00",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-b",
+    "payload": {
+     "dispute": "D-01",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-a",
+    "payload": {
+     "dispute": "D-02",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-c",
+    "payload": {
+     "dispute": "D-03",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-b",
+    "payload": {
+     "dispute": "D-04",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-a",
+    "payload": {
+     "dispute": "D-05",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-c",
+    "payload": {
+     "dispute": "D-06",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-b",
+    "payload": {
+     "dispute": "D-07",
+     "expect": "reject"
+    }
+   }
+  ],
+  [
+   {
+    "key": "acct-d",
+    "payload": {
+     "dispute": "D-10",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-d",
+    "payload": {
+     "dispute": "D-11",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-e",
+    "payload": {
+     "dispute": "D-12",
+     "poison": true
+    }
+   },
+   {
+    "key": "acct-f",
+    "payload": {
+     "dispute": "D-13",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-d",
+    "payload": {
+     "dispute": "D-14",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-e",
+    "payload": {
+     "dispute": "D-15",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-f",
+    "payload": {
+     "dispute": "D-16",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-e",
+    "payload": {
+     "dispute": "D-17",
+     "expect": "escalate"
+    }
+   }
+  ],
+  [
+   {
+    "key": "acct-g",
+    "payload": {
+     "dispute": "D-20",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-h",
+    "payload": {
+     "dispute": "D-21",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-i",
+    "payload": {
+     "dispute": "D-22",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-g",
+    "payload": {
+     "dispute": "D-23",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-h",
+    "payload": {
+     "dispute": "D-24",
+     "expect": "refund"
+    }
+   },
+   {
+    "key": "acct-i",
+    "payload": {
+     "dispute": "D-25",
+     "expect": "reject"
+    }
+   },
+   {
+    "key": "acct-g",
+    "payload": {
+     "dispute": "D-26",
+     "expect": "escalate"
+    }
+   },
+   {
+    "key": "acct-h",
+    "payload": {
+     "dispute": "D-27",
+     "expect": "refund"
+    }
+   }
+  ]
+ ]
+}
