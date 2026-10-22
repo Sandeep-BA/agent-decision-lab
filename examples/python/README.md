@@ -17,6 +17,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`agent_event_consumer`](agent_event_consumer/) | An agent step inside an existing event consumer: per-key order, 429 backpressure, parking, redelivery | `python -m unittest discover -s examples/python/agent_event_consumer -p "test_*.py"` |
 | [`agent_sql_gate`](agent_sql_gate/) | Letting an agent query an existing database: a capability gate from SQLite hooks | `python -m unittest discover -s examples/python/agent_sql_gate -p "test_*.py"` |
 | [`batch_submission_ledger`](batch_submission_ledger/) | Provider batch APIs: a submission ledger with custom_id reconciliation and resubmission | `python -m unittest discover -s examples/python/batch_submission_ledger -p "test_*.py"` |
+| [`tenant_fair_queue`](tenant_fair_queue/) | Agent traffic on shared internal services: per-tenant fair queuing and an agent call budget | `python -m unittest discover -s examples/python/tenant_fair_queue -p "test_*.py"` |
+| [`residual_router`](residual_router/) | Rules first, agent for the residual: router, validator and acceptance threshold | `python -m unittest discover -s examples/python/residual_router -p "test_*.py"` |
+| [`prompt_cache_audit`](prompt_cache_audit/) | Prompt caching in agent loops: prefix breakers, breakpoints and TTL gaps | `python -m unittest discover -s examples/python/prompt_cache_audit -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.

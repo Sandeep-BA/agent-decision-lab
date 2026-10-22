@@ -1,0 +1,1 @@
+# Author: Sandeep Belgavi. Standard library only; requires Python >= 3.11. Nothing to install.
