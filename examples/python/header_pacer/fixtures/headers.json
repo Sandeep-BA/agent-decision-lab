@@ -1,0 +1,4 @@
+{
+  "note": "Synthetic header sequences are built in the tests; no external fixture is needed.",
+  "limit_tokens_per_minute": 2000000
+}

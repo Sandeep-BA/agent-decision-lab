@@ -1,0 +1,5 @@
+{
+  "note": "The desired state is built in reconciler.demo(); no external fixture file is needed.",
+  "principal": "contractor:erika",
+  "projects": ["atlas", "orion", "vega"]
+}

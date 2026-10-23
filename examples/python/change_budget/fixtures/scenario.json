@@ -1,0 +1,4 @@
+{
+  "note": "Synthetic changes are generated in budget.runaway_deletions(); no external fixture is needed.",
+  "limits": {"rows": 500, "customers": 50}
+}
