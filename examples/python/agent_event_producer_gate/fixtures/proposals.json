@@ -1,0 +1,10 @@
+{
+  "order": {"id": "7731", "total": "120.00", "currency": "EUR"},
+  "producer": {"name": "support-agent", "version": "model-2026-10 prompt-14"},
+  "proposals": [
+    {"order_id": "7731", "amount": "15.00", "currency": "EUR", "reason_code": "late_delivery"},
+    {"order_id": "7731", "amount": "150.00", "currency": "EUR", "reason_code": "damaged_item"},
+    {"order_id": "7731", "amount": "15.00", "currency": "USD", "reason_code": "late_delivery"},
+    {"order_id": "7713", "amount": "15.00", "currency": "EUR", "reason_code": "late_delivery"}
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "check": "shape",
+    "verdict": "PASS",
+    "detail": "object=chat.completion finish_reason=stop usage={'prompt_tokens': 36, 'prompt_tokens_details': {'cached_tokens': 0}, 'completion_tokens': 2, 'total_tokens': 38}"
+  },
+  {
+    "check": "length",
+    "verdict": "PASS",
+    "detail": "finish_reason='length' with max_tokens=5"
+  },
+  {
+    "check": "max_completion_tokens",
+    "verdict": "DIFF",
+    "detail": "finish_reason='stop' completion_tokens=141 with max_completion_tokens=5"
+  },
+  {
+    "check": "n",
+    "verdict": "DIFF",
+    "detail": "asked n=2, got 1 choice(s)"
+  },
+  {
+    "check": "stop",
+    "verdict": "PASS",
+    "detail": "content='A B C ' finish_reason='stop'"
+  },
+  {
+    "check": "json_object",
+    "verdict": "PASS",
+    "detail": "parsed JSON keys ['city']"
+  },
+  {
+    "check": "json_schema",
+    "verdict": "PASS",
+    "detail": "object={\"city\": \"Beijing\", \"celsius\": 10}"
+  },
+  {
+    "check": "tool_call",
+    "verdict": "PASS",
+    "detail": "name=get_weather arguments={\"city\":\"Pune\"}"
+  },
+  {
+    "check": "stream",
+    "verdict": "PASS",
+    "detail": "11 chunks, [DONE]=True, usage chunk=True, usage chunk has empty choices=True"
+  },
+  {
+    "check": "logprobs",
+    "verdict": "PASS",
+    "detail": "logprobs present=True"
+  },
+  {
+    "check": "unknown_param",
+    "verdict": "DIFF",
+    "detail": "unknown parameter -> HTTP 200 (a strict server answers 400; 200 means it was silently ignored)"
+  },
+  {
+    "check": "bad_model",
+    "verdict": "PASS",
+    "detail": "HTTP 404, error object=True, keys=['code', 'message', 'param', 'type']"
+  },
+  {
+    "check": "seed",
+    "verdict": "DIFF",
+    "detail": "same seed twice gave different output"
+  }
+]
