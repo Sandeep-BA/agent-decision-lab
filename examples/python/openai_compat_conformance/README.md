@@ -5,7 +5,8 @@
 A runnable companion to *OpenAI-Compatible Is Not Identical: A Conformance Suite for Chat Completions Across
 Providers and Local Servers* (aicassindra.com, LLM). Many servers accept the Chat Completions request shape and
 silently ignore parts of it. `conformance.py` sends thirteen small requests and checks what each field actually
-did, reporting PASS, DIFF (answered, but not as the reference behaves) or FAIL.
+did, reporting PASS, DIFF (answered, but not with the effect the check expects) or FAIL. `unknown_param` is a
+strictness check and `seed` is informational, because OpenAI documents seed determinism as best effort.
 
 ## Prerequisites
 

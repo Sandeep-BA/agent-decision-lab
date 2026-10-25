@@ -4,7 +4,8 @@ Author: Sandeep Belgavi. Standard library only.
 
 Sends a fixed set of small requests to any server that claims the OpenAI Chat Completions
 shape (`POST {base}/chat/completions`) and reports, per check, PASS, DIFF (the server answered
-but differently from the OpenAI reference behaviour) or FAIL (error or unusable answer).
+but not with the effect the check expects) or FAIL (error or unusable answer). `unknown_param` is a
+strictness check and `seed` is informational: OpenAI documents seed determinism as best effort.
 The point is to find out what a "compatible" endpoint silently ignores before your code
 depends on it.
 
@@ -215,7 +216,7 @@ def check_seed(c):
         ta, tb = a['choices'][0]['message']['content'], b['choices'][0]['message']['content']
     except (KeyError, IndexError, TypeError):
         return 'FAIL', 'unusable response'
-    return ('PASS' if ta == tb else 'DIFF'), 'same seed twice gave %s output' % ('identical' if ta == tb else 'different')
+    return ('PASS' if ta == tb else 'DIFF'), 'informational: same seed twice gave %s output' % ('identical' if ta == tb else 'different')
 
 
 CHECKS = [check_shape, check_length, check_max_completion_tokens, check_n, check_stop, check_json_object,
