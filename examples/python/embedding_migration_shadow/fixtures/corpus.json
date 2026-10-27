@@ -1,0 +1,14 @@
+[
+ {"id": "c01", "text": "Refund policy: a refund is issued to the original card within five days of the return arriving.", "modified": "2026-10-01"},
+ {"id": "c02", "text": "We reimburse return postage when the book arrived damaged.", "modified": "2026-10-01"},
+ {"id": "c03", "text": "Money-back requests for ebooks are accepted within fourteen days if the file was not downloaded.", "modified": "2026-10-02"},
+ {"id": "c04", "text": "A parcel that shows delivered but never arrived is traced with the courier before a replacement is sent.", "modified": "2026-10-02"},
+ {"id": "c05", "text": "Package tracking numbers are emailed when the order leaves the warehouse.", "modified": "2026-10-03"},
+ {"id": "c06", "text": "Gift cards cannot be exchanged for cash.", "modified": "2026-10-03"},
+ {"id": "c07", "text": "Preorders are charged when the book ships, not when the order is placed.", "modified": "2026-10-04"},
+ {"id": "c08", "text": "Signed editions are final sale and cannot be returned.", "modified": "2026-10-04"},
+ {"id": "c09", "text": "To change the shipping address, contact the help desk before the order is packed.", "modified": "2026-10-05"},
+ {"id": "c10", "text": "A duplicate charge on one order is reversed by the payments team within two working days.", "modified": "2026-10-27"},
+ {"id": "c11", "text": "Return labels are sent by email and are valid for thirty days.", "modified": "2026-10-27"},
+ {"id": "c12", "text": "Damaged books can be photographed and reported through the order page.", "modified": "2026-10-27"}
+]

@@ -1,0 +1,7 @@
+[
+ {"id": "q1", "text": "how do I get a refund for a damaged book", "relevant": ["c01", "c02", "c12"]},
+ {"id": "q2", "text": "my package never arrived", "relevant": ["c04", "c05"]},
+ {"id": "q3", "text": "money back for an ebook", "relevant": ["c03"]},
+ {"id": "q4", "text": "charged twice for one order", "relevant": ["c10"]},
+ {"id": "q5", "text": "can I return a signed edition", "relevant": ["c08", "c11"]}
+]

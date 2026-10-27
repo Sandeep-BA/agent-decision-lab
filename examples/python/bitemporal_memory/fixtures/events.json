@@ -1,0 +1,6 @@
+[
+ {"kind": "learn", "subject": "customer-88", "attribute": "shipping_address", "value": "4 Hill Street",
+  "valid_from": "2024-02-01", "at": "2024-02-01", "source": "account signup"},
+ {"kind": "learn", "subject": "customer-88", "attribute": "shipping_address", "value": "12 Lake Road",
+  "valid_from": "2026-10-03", "at": "2026-10-10", "source": "CASE-5120"}
+]

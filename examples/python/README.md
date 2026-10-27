@@ -20,6 +20,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`tenant_fair_queue`](tenant_fair_queue/) | Agent traffic on shared internal services: per-tenant fair queuing and an agent call budget | `python -m unittest discover -s examples/python/tenant_fair_queue -p "test_*.py"` |
 | [`residual_router`](residual_router/) | Rules first, agent for the residual: router, validator and acceptance threshold | `python -m unittest discover -s examples/python/residual_router -p "test_*.py"` |
 | [`prompt_cache_audit`](prompt_cache_audit/) | Prompt caching in agent loops: prefix breakers, breakpoints and TTL gaps | `python -m unittest discover -s examples/python/prompt_cache_audit -p "test_*.py"` |
+| [`agent_commit_token_reads`](agent_commit_token_reads/) | Verifying an agent’s own write: replica lag, commit tokens and intent keys | `python -m unittest discover -s examples/python/agent_commit_token_reads -p "test_*.py"` |
+| [`embedding_migration_shadow`](embedding_migration_shadow/) | Changing embedding models: overlap at k, recall at k, rank fusion and backfill gaps | `python -m unittest discover -s examples/python/embedding_migration_shadow -p "test_*.py"` |
+| [`bitemporal_memory`](bitemporal_memory/) | Bitemporal agent memory: valid time, record time, corrections and erasure | `python -m unittest discover -s examples/python/bitemporal_memory -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
