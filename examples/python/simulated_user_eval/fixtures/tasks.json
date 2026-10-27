@@ -1,14 +1,14 @@
 [
-  {"id": "move-rao", "plan": "Move booking QX7P2 to 2026-11-05.",
-   "facts": {"reference": "QX7P2", "surname": "Rao", "new_date": "2026-11-05"},
+  {"id": "move-geetha", "plan": "Move the delivery of order QX7P2 to 2026-11-05.",
+   "facts": {"reference": "QX7P2", "name": "Geetha", "new_date": "2026-11-05"},
    "expected_change": ["QX7P2", "2026-11-05"]},
-  {"id": "late-osei", "plan": "Ask to move booking LM4K9 to 2026-10-29; departure is in 10 hours, so the policy forbids it.",
-   "facts": {"reference": "LM4K9", "surname": "Osei", "new_date": "2026-10-29"},
+  {"id": "late-jenya", "plan": "Ask to move the delivery of order LM4K9 to 2026-10-29; dispatch is in 10 hours, so the policy forbids it.",
+   "facts": {"reference": "LM4K9", "name": "Jenya", "new_date": "2026-10-29"},
    "expected_change": null},
-  {"id": "wrong-name", "plan": "Ask to move booking ZT8W1 but give the surname Haddadi.",
-   "facts": {"reference": "ZT8W1", "surname": "Haddadi", "new_date": "2026-11-15"},
+  {"id": "wrong-name", "plan": "Ask to move the delivery of order ZT8W1 but give the name Tanishk.",
+   "facts": {"reference": "ZT8W1", "name": "Tanishk", "new_date": "2026-11-15"},
    "expected_change": null},
-  {"id": "move-haddad", "plan": "Move booking ZT8W1 to 2026-11-14.",
-   "facts": {"reference": "ZT8W1", "surname": "Haddad", "new_date": "2026-11-14"},
+  {"id": "move-tanishka", "plan": "Move the delivery of order ZT8W1 to 2026-11-14.",
+   "facts": {"reference": "ZT8W1", "name": "Tanishka", "new_date": "2026-11-14"},
    "expected_change": ["ZT8W1", "2026-11-14"]}
 ]

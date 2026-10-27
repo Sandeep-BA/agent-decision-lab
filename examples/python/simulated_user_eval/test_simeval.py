@@ -13,7 +13,7 @@ class SimulatedUserEvalTests(unittest.TestCase):
         r = s.run(self.tasks, "waits", careful=False)
         self.assertEqual((r["pass^1"], r["pass^k"]), (1.0, 1.0))
 
-    def test_detailed_persona_exposes_it_on_the_late_booking(self):
+    def test_detailed_persona_exposes_it_on_the_late_order(self):
         r = s.run(self.tasks, "detailed", careful=False)
         self.assertEqual(r["successes_per_task"], [4, 0, 4, 4])
         self.assertEqual(r["failures"], {"agent": 4, "simulator": 0})
