@@ -23,6 +23,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`agent_commit_token_reads`](agent_commit_token_reads/) | Verifying an agent’s own write: replica lag, commit tokens and intent keys | `python -m unittest discover -s examples/python/agent_commit_token_reads -p "test_*.py"` |
 | [`embedding_migration_shadow`](embedding_migration_shadow/) | Changing embedding models: overlap at k, recall at k, rank fusion and backfill gaps | `python -m unittest discover -s examples/python/embedding_migration_shadow -p "test_*.py"` |
 | [`bitemporal_memory`](bitemporal_memory/) | Bitemporal agent memory: valid time, record time, corrections and erasure | `python -m unittest discover -s examples/python/bitemporal_memory -p "test_*.py"` |
+| [`async_job_endpoint`](async_job_endpoint/) | An agent step behind an endpoint: 202 Accepted, a job resource, Idempotency-Key and one credit per request | `python -m unittest discover -s examples/python/async_job_endpoint -p "test_*.py"` |
+| [`agent_cost_forecast`](agent_cost_forecast/) | Forecasting an agent feature's token cost from a pilot and checking it against week one | `python -m unittest discover -s examples/python/agent_cost_forecast -p "test_*.py"` |
+| [`reasoning_state_passthrough`](reasoning_state_passthrough/) | Passing reasoning state back across tool calls through a provider-neutral transcript store | `python -m unittest discover -s examples/python/reasoning_state_passthrough -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
