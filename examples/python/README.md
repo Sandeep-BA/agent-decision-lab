@@ -26,6 +26,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`async_job_endpoint`](async_job_endpoint/) | An agent step behind an endpoint: 202 Accepted, a job resource, Idempotency-Key and one credit per request | `python -m unittest discover -s examples/python/async_job_endpoint -p "test_*.py"` |
 | [`agent_cost_forecast`](agent_cost_forecast/) | Forecasting an agent feature's token cost from a pilot and checking it against week one | `python -m unittest discover -s examples/python/agent_cost_forecast -p "test_*.py"` |
 | [`reasoning_state_passthrough`](reasoning_state_passthrough/) | Passing reasoning state back across tool calls through a provider-neutral transcript store | `python -m unittest discover -s examples/python/reasoning_state_passthrough -p "test_*.py"` |
+| [`change_event_loop_guard`](change_event_loop_guard/) | Origin filters, no-op suppression and hop limits for agents subscribed to change events they can cause | `python -m unittest discover -s examples/python/change_event_loop_guard -p "test_*.py"` |
+| [`streamed_tool_call_assembler`](streamed_tool_call_assembler/) | Assembling streamed tool-call arguments from Claude, OpenAI Responses and Gemini Interactions events, with an execution gate | `python -m unittest discover -s examples/python/streamed_tool_call_assembler -p "test_*.py"` |
+| [`tokenizer_count_compare`](tokenizer_count_compare/) | The same texts under five public tokenizers at pinned revisions, and a per-kind projection for a model switch | `python -m unittest discover -s examples/python/tokenizer_count_compare -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
