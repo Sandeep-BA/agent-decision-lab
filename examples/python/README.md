@@ -29,6 +29,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`change_event_loop_guard`](change_event_loop_guard/) | Origin filters, no-op suppression and hop limits for agents subscribed to change events they can cause | `python -m unittest discover -s examples/python/change_event_loop_guard -p "test_*.py"` |
 | [`streamed_tool_call_assembler`](streamed_tool_call_assembler/) | Assembling streamed tool-call arguments from Claude, OpenAI Responses and Gemini Interactions events, with an execution gate | `python -m unittest discover -s examples/python/streamed_tool_call_assembler -p "test_*.py"` |
 | [`tokenizer_count_compare`](tokenizer_count_compare/) | The same texts under five public tokenizers at pinned revisions, and a per-kind projection for a model switch | `python -m unittest discover -s examples/python/tokenizer_count_compare -p "test_*.py"` |
+| [`agent_cache_invalidation`](agent_cache_invalidation/) | Cache-aside invalidation when an agent writes around the service: direct writes, change-stream invalidation and a versioned tombstone against slow refills | `python -m unittest discover -s examples/python/agent_cache_invalidation -p "test_*.py"` |
+| [`agent_bulk_change_job`](agent_bulk_change_job/) | A previewed bulk change: declarative spec, manifest hash approval, version-checked batches and resume | `python -m unittest discover -s examples/python/agent_bulk_change_job -p "test_*.py"` |
+| [`eval_trial_isolation`](eval_trial_isolation/) | Shared versus per-trial databases in agent evaluation, and a start-state fingerprint that catches leaks | `python -m unittest discover -s examples/python/eval_trial_isolation -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
