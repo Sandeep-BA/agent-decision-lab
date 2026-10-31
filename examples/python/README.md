@@ -32,6 +32,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`agent_cache_invalidation`](agent_cache_invalidation/) | Cache-aside invalidation when an agent writes around the service: direct writes, change-stream invalidation and a versioned tombstone against slow refills | `python -m unittest discover -s examples/python/agent_cache_invalidation -p "test_*.py"` |
 | [`agent_bulk_change_job`](agent_bulk_change_job/) | A previewed bulk change: declarative spec, manifest hash approval, version-checked batches and resume | `python -m unittest discover -s examples/python/agent_bulk_change_job -p "test_*.py"` |
 | [`eval_trial_isolation`](eval_trial_isolation/) | Shared versus per-trial databases in agent evaluation, and a start-state fingerprint that catches leaks | `python -m unittest discover -s examples/python/eval_trial_isolation -p "test_*.py"` |
+| [`scheduled_followup_dst`](scheduled_followup_dst/) | Agent-scheduled follow-ups stored as wall-clock time plus IANA zone: repeated and missing hours, fire-time re-check and idempotent sends | `python -m unittest discover -s examples/python/scheduled_followup_dst -p "test_*.py"` |
+| [`expand_contract_rename`](expand_contract_rename/) | Expand-contract column rename with agent tools on both names: sync triggers, old-write log, reference scanner and contract gate | `python -m unittest discover -s examples/python/expand_contract_rename -p "test_*.py"` |
+| [`shared_spend_limit`](shared_spend_limit/) | One token budget shared by concurrent runs: check-then-spend overshoot against reserve-and-settle | `python -m unittest discover -s examples/python/shared_spend_limit -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.

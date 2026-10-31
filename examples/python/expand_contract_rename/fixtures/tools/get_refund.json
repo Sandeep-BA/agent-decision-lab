@@ -1,0 +1,1 @@
+{"name": "get_refund", "description": "Refund for a case. Returns case_id and refund_amount in pounds.", "inputSchema": {"type": "object", "properties": {"case_id": {"type": "string"}}, "required": ["case_id"]}}
