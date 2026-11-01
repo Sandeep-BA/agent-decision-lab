@@ -35,6 +35,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`scheduled_followup_dst`](scheduled_followup_dst/) | Agent-scheduled follow-ups stored as wall-clock time plus IANA zone: repeated and missing hours, fire-time re-check and idempotent sends | `python -m unittest discover -s examples/python/scheduled_followup_dst -p "test_*.py"` |
 | [`expand_contract_rename`](expand_contract_rename/) | Expand-contract column rename with agent tools on both names: sync triggers, old-write log, reference scanner and contract gate | `python -m unittest discover -s examples/python/expand_contract_rename -p "test_*.py"` |
 | [`shared_spend_limit`](shared_spend_limit/) | One token budget shared by concurrent runs: check-then-spend overshoot against reserve-and-settle | `python -m unittest discover -s examples/python/shared_spend_limit -p "test_*.py"` |
+| [`legacy_acl`](legacy_acl/) | An anti-corruption layer for agent tools over a legacy back office: code and unit translation, unwritten invariants and an idempotent refund | `python -m unittest discover -s examples/python/legacy_acl -p "test_*.py"` |
+| [`stuck_loop_detector`](stuck_loop_detector/) | Detecting stuck agent loops from normalised call and result fingerprints and a progress signal, with a polling exemption | `python -m unittest discover -s examples/python/stuck_loop_detector -p "test_*.py"` |
+| [`eval_noise`](eval_noise/) | Task, generation and grader variance in an eval score from repeated generations and re-grades, and the resulting half-widths | `python -m unittest discover -s examples/python/eval_noise -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
