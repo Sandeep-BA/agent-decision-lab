@@ -1,0 +1,2 @@
+# Pinned for the example. Author: Sandeep Belgavi
+pydantic-ai-slim==2.65.0
