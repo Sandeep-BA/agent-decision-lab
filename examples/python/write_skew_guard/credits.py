@@ -18,7 +18,7 @@ def connect(path):
     return conn
 
 
-def setup(path, existing=1):
+def setup(path, existing=1, seed_quota=True):
     conn = connect(path)
     conn.executescript("""
         CREATE TABLE goodwill_credit (id INTEGER PRIMARY KEY, customer_id TEXT, case_id TEXT, amount INTEGER, month TEXT);
@@ -28,7 +28,8 @@ def setup(path, existing=1):
     for i in range(existing):
         conn.execute("INSERT INTO goodwill_credit (customer_id, case_id, amount, month) VALUES (?, ?, ?, ?)",
                      ("geetha", "CASE-40%02d" % i, 200, MONTH))
-    conn.execute("INSERT INTO goodwill_quota VALUES (?, ?, ?)", ("geetha", MONTH, existing))
+    if seed_quota:
+        conn.execute("INSERT INTO goodwill_quota VALUES (?, ?, ?)", ("geetha", MONTH, existing))
     conn.close()
 
 
@@ -49,7 +50,9 @@ def grant_guarded(conn, customer_id, case_id, amount, limit=LIMIT):
     """Write tool with the limit enforced in one short transaction on a quota row."""
     conn.execute("BEGIN IMMEDIATE")
     try:
-        conn.execute("INSERT OR IGNORE INTO goodwill_quota VALUES (?, ?, 0)", (customer_id, MONTH))
+        # Start the quota row from the credits that already exist, so switching tools mid-month counts them.
+        conn.execute("INSERT OR IGNORE INTO goodwill_quota SELECT ?, ?, count(*) FROM goodwill_credit "
+                     "WHERE customer_id = ? AND month = ?", (customer_id, MONTH, customer_id, MONTH))
         row = conn.execute("UPDATE goodwill_quota SET used = used + 1 "
                            "WHERE customer_id = ? AND month = ? AND used < ? RETURNING used",
                            (customer_id, MONTH, limit)).fetchone()
