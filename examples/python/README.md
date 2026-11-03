@@ -3,8 +3,8 @@
 **Author: Sandeep Belgavi**
 
 Small, self-contained Python programs that accompany the agent architecture guides on
-aicassindra.com. Each directory is independent, uses only the Python standard library
-(3.11 or newer), ships synthetic fixtures, and has its own README, tests and limitations.
+aicassindra.com. Each directory is independent, uses the Python standard library unless its
+`requirements.txt` pins a package (3.11 or newer), ships synthetic fixtures, and has its own README, tests and limitations.
 None of them calls a model provider; they exercise the runtime mechanics around an agent.
 
 | Example | Guide | Run the tests |
@@ -42,6 +42,9 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`undo_window`](undo_window/) | An undo window for agent actions: conditional cancel and claim, idempotent execution | `python -m unittest discover -s examples/python/undo_window -p "test_*.py"` |
 | [`tool_selection_regression`](tool_selection_regression/) | Tool descriptions as prompts: recorded selection runs, per-case diffs and new failures | `python -m unittest discover -s examples/python/tool_selection_regression -p "test_*.py"` |
 | [`table_row_chunks`](table_row_chunks/) | Tables in a retrieval corpus: row serialization with headers and a strict answerability check | `python -m unittest discover -s examples/python/table_row_chunks -p "test_*.py"` |
+| [`model_fallback_refusal_policy`](model_fallback_refusal_policy/) | Refusals and ModelFallback in pydantic-ai 2.65: the default and an explicit stop policy, pinned by tests (needs `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/model_fallback_refusal_policy -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
+
+A Go example, [`../go/llm_call_budget`](../go/llm_call_budget/), tests model-call budgets in ADK Go v2.7.0 with `go test` (Go 1.26.10 or newer).
