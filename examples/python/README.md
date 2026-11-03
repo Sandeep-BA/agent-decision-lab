@@ -38,6 +38,10 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`legacy_acl`](legacy_acl/) | An anti-corruption layer for agent tools over a legacy back office: code and unit translation, unwritten invariants and an idempotent refund | `python -m unittest discover -s examples/python/legacy_acl -p "test_*.py"` |
 | [`stuck_loop_detector`](stuck_loop_detector/) | Detecting stuck agent loops from normalised call and result fingerprints and a progress signal, with a polling exemption | `python -m unittest discover -s examples/python/stuck_loop_detector -p "test_*.py"` |
 | [`eval_noise`](eval_noise/) | Task, generation and grader variance in an eval score from repeated generations and re-grades, and the resulting half-widths | `python -m unittest discover -s examples/python/eval_noise -p "test_*.py"` |
+| [`write_skew_guard`](write_skew_guard/) | Write skew between concurrent agent runs: a quota-row write tool against a read-then-insert pair | `python -m unittest discover -s examples/python/write_skew_guard -p "test_*.py"` |
+| [`undo_window`](undo_window/) | An undo window for agent actions: conditional cancel and claim, idempotent execution | `python -m unittest discover -s examples/python/undo_window -p "test_*.py"` |
+| [`tool_selection_regression`](tool_selection_regression/) | Tool descriptions as prompts: recorded selection runs, per-case diffs and new failures | `python -m unittest discover -s examples/python/tool_selection_regression -p "test_*.py"` |
+| [`table_row_chunks`](table_row_chunks/) | Tables in a retrieval corpus: row serialization with headers and a strict answerability check | `python -m unittest discover -s examples/python/table_row_chunks -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.

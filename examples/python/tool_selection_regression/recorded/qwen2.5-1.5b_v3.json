@@ -1,0 +1,362 @@
+{
+ "model": "qwen2.5:1.5b",
+ "repeats": 3,
+ "versions": {
+  "v1": {
+   "lookup_order": "Look up an order: items, status, shipping and delivery dates.",
+   "start_return": "Start a return for a delivered order. Creates a return label.",
+   "issue_refund": "Refund money for an order that was returned or never delivered.",
+   "check_stock": "Check whether a book is in stock, by title or ISBN."
+  },
+  "v2": {
+   "lookup_order": "Look up an order: items, status, shipping and delivery dates.",
+   "start_return": "Start a return for a delivered order. Creates a return label. Use this for anything about getting money back.",
+   "issue_refund": "Refund money for an order that was returned or never delivered.",
+   "check_stock": "Check whether a book is in stock, by title or ISBN."
+  },
+  "v3": {
+   "lookup_order": "Look up an order: items, status, shipping and delivery dates.",
+   "start_return": "Start a return or a refund for an order. Creates a return label when needed.",
+   "issue_refund": "Refund an order that was never delivered.",
+   "check_stock": "Check whether a book is in stock, by title or ISBN."
+  }
+ },
+ "results": [
+  {
+   "version": "v3",
+   "text": "Where is my order BK-1042?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Where is my order BK-1042?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Where is my order BK-1042?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "When will BK-1043 arrive?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "When will BK-1043 arrive?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "When will BK-1043 arrive?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Has order BK-1050 shipped yet?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Has order BK-1050 shipped yet?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Has order BK-1050 shipped yet?",
+   "expected": "lookup_order",
+   "got": "lookup_order",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "What books are in order BK-1051?",
+   "expected": "lookup_order",
+   "got": "check_stock",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "What books are in order BK-1051?",
+   "expected": "lookup_order",
+   "got": "check_stock",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "What books are in order BK-1051?",
+   "expected": "lookup_order",
+   "got": "check_stock",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "I want to send back the book from BK-1044, it arrived damaged.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "I want to send back the book from BK-1044, it arrived damaged.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "I want to send back the book from BK-1044, it arrived damaged.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Please give me a return label for BK-1045, wrong edition.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Please give me a return label for BK-1045, wrong edition.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Please give me a return label for BK-1045, wrong edition.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "The cover of the novel in BK-1052 is torn, I want to return it.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "The cover of the novel in BK-1052 is torn, I want to return it.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "The cover of the novel in BK-1052 is torn, I want to return it.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Can I return BK-1053? I bought it twice by mistake.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Can I return BK-1053? I bought it twice by mistake.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Can I return BK-1053? I bought it twice by mistake.",
+   "expected": "start_return",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "BK-1046 never arrived, I want my money back.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "BK-1046 never arrived, I want my money back.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "BK-1046 never arrived, I want my money back.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "I already mailed back BK-1047 last week, where is my refund?",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "I already mailed back BK-1047 last week, where is my refund?",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "I already mailed back BK-1047 last week, where is my refund?",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Refund BK-1054 please, the parcel was lost.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Refund BK-1054 please, the parcel was lost.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Refund BK-1054 please, the parcel was lost.",
+   "expected": "issue_refund",
+   "got": "issue_refund",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "You charged me twice for BK-1055, please refund one charge.",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "You charged me twice for BK-1055, please refund one charge.",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "You charged me twice for BK-1055, please refund one charge.",
+   "expected": "issue_refund",
+   "got": "start_return",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Do you have The Hobbit in stock?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Do you have The Hobbit in stock?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Do you have The Hobbit in stock?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Is ISBN 9780140449136 available?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Is ISBN 9780140449136 available?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Is ISBN 9780140449136 available?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Can I buy a copy of Dune today?",
+   "expected": "check_stock",
+   "got": null,
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Can I buy a copy of Dune today?",
+   "expected": "check_stock",
+   "got": null,
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Can I buy a copy of Dune today?",
+   "expected": "check_stock",
+   "got": null,
+   "repeat": 2
+  },
+  {
+   "version": "v3",
+   "text": "Do you still have the atlas Jenya ordered last month on the shelf?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 0
+  },
+  {
+   "version": "v3",
+   "text": "Do you still have the atlas Jenya ordered last month on the shelf?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 1
+  },
+  {
+   "version": "v3",
+   "text": "Do you still have the atlas Jenya ordered last month on the shelf?",
+   "expected": "check_stock",
+   "got": "check_stock",
+   "repeat": 2
+  }
+ ]
+}
