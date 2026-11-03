@@ -33,7 +33,7 @@ unguarded credits=3 limit=2 results=['granted', 'granted']
 guarded   credits=2 limit=2 results=['granted', 'limit_reached']
 ```
 
-Four unittest cases: the unguarded pair breaks the limit on every repetition, the guarded tool holds it, four concurrent runs with no credits get exactly two grants, and a refusal is a result with a next step.
+Five unittest cases: the unguarded pair breaks the limit on every repetition, the guarded tool holds it, four concurrent runs with no credits get exactly two grants, a refusal is a result with a next step, and a quota row created mid-month starts from the credits that already exist.
 
 ## Limitations
 

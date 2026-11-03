@@ -43,6 +43,15 @@ class WriteSkewTest(unittest.TestCase):
         self.assertEqual(out["status"], "limit_reached")
         self.assertIn("next_step", out)
 
+    def test_quota_row_created_mid_month_counts_existing_credits(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "c.db")
+            credits.setup(path, existing=2, seed_quota=False)
+            conn = credits.connect(path)
+            out = credits.grant_guarded(conn, "geetha", "CASE-4110", 100)
+            conn.close()
+        self.assertEqual(out["status"], "limit_reached")
+
 
 if __name__ == "__main__":
     unittest.main()
