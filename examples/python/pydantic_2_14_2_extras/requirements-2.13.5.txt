@@ -1,0 +1,2 @@
+pydantic==2.13.5
+pydantic-core==2.46.5

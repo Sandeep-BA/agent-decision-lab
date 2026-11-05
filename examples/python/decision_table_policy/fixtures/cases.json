@@ -1,0 +1,8 @@
+[
+  {"name": "Geetha: damaged sale item, day 40", "delivered_on": "2026-10-01", "facts": {"damaged": true, "sale": true, "member": false, "days": 40}},
+  {"name": "Jenya: member, unused book, day 44", "delivered_on": "2026-10-01", "facts": {"damaged": false, "sale": false, "member": true, "days": 44}},
+  {"name": "Dinky: sale item, not damaged, day 12", "delivered_on": "2026-10-01", "facts": {"damaged": false, "sale": true, "member": false, "days": 12}},
+  {"name": "Hansini: standard return, day 31", "delivered_on": "2026-10-01", "facts": {"damaged": false, "sale": false, "member": false, "days": 31}},
+  {"name": "Tanishka: member, delivered under v6, day 40", "delivered_on": "2026-08-20", "facts": {"damaged": false, "sale": false, "member": true, "days": 40}},
+  {"name": "Order delivered before any policy version", "delivered_on": "2025-12-01", "facts": {"damaged": false, "sale": false, "member": false, "days": 3}}
+]

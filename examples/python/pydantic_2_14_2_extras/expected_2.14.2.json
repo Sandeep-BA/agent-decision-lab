@@ -1,0 +1,11 @@
+{
+ "pydantic": "2.14.2",
+ "qpmf_json": "ValidationError: string_pattern_mismatch",
+ "qpmf_python": "ValidationError: string_pattern_mismatch",
+ "3r8g_typeddict": "accepted: {'amount': 1200}",
+ "3r8g_dataclass": "accepted: 1200",
+ "3r8g_basemodel": "accepted: 1200",
+ "page_forbid_json": "ValidationError: extra_forbidden",
+ "page_forbid_python": "ValidationError: extra_forbidden",
+ "page_allow_json_extras": "accepted: {'page_size': 50}"
+}

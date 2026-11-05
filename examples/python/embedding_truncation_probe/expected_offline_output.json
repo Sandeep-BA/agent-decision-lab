@@ -1,0 +1,29 @@
+{
+  "mode": "offline fake",
+  "rows": {
+    "head": {
+      "chars": 456,
+      "tokens": 72,
+      "at_limit": false
+    },
+    "head+filler": {
+      "chars": 4176,
+      "tokens": 256,
+      "at_limit": true
+    },
+    "head+filler+tail": {
+      "chars": 4272,
+      "tokens": 256,
+      "at_limit": true
+    },
+    "tail": {
+      "chars": 96,
+      "tokens": 17,
+      "at_limit": false
+    }
+  },
+  "tail_changes_vector": false,
+  "query_vs_long_chunk": 0.1446,
+  "query_vs_tail_chunk": 0.4667,
+  "truncate_false": "the input length exceeds the context length"
+}

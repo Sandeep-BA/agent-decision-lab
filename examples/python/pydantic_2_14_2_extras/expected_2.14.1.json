@@ -1,0 +1,11 @@
+{
+ "pydantic": "2.14.1",
+ "qpmf_json": "accepted: {'x_priority': 2, 'refund_override': 1}",
+ "qpmf_python": "ValidationError: string_pattern_mismatch",
+ "3r8g_typeddict": "accepted: {'amount': 999999}",
+ "3r8g_dataclass": "accepted: 999999",
+ "3r8g_basemodel": "accepted: 1200",
+ "page_forbid_json": "accepted: Page(page_size=10)",
+ "page_forbid_python": "ValidationError: extra_forbidden",
+ "page_allow_json_extras": "accepted: {}"
+}

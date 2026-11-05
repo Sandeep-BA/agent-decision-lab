@@ -1,0 +1,23 @@
+{
+  "merge_patch": {
+    "addresses": 1,
+    "phone": "deleted",
+    "marketing_opt_in": false
+  },
+  "typed_json_patch": {
+    "ops": [
+      {
+        "op": "add",
+        "path": "/addresses/-",
+        "value": {
+          "label": "office",
+          "line1": "14 Mill Road"
+        }
+      }
+    ],
+    "addresses": 3,
+    "phone": "+91 90000 11111",
+    "marketing_opt_in": true
+  },
+  "stale_consent_change": "conflict: test failed at /marketing_opt_in: expected False, found True"
+}

@@ -1,0 +1,13 @@
+{
+  "_note": "Sizes from the SGLang 0.5.23 Paged Experts documentation example (Qwen3-30B-A3B GPTQ int4: 128 experts, 48 MoE layers, 2.43 MB per expert, K = 92 on a 16 GB card). top_k 8 from the model config. Routing is synthetic.",
+  "base": {"experts": 128, "top_k": 8, "resident": 92, "layers": 48, "expert_mb": 2.43, "gbps": 50,
+           "batch": 1, "locality": 0.7, "skew": 0.6, "decode_steps": 200, "prefill_tokens": 512},
+  "runs": {
+    "default": {},
+    "no_locality": {"locality": 0.0},
+    "uniform_routing": {"locality": 0.0, "skew": 0.0},
+    "all_resident": {"resident": 128},
+    "small_k_four_requests": {"resident": 26, "batch": 4},
+    "half_bandwidth": {"gbps": 25}
+  }
+}

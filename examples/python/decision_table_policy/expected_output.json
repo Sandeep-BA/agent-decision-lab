@@ -1,0 +1,72 @@
+{
+  "cases": [
+    {
+      "name": "Geetha: damaged sale item, day 40",
+      "outcome": "refund",
+      "rule": "R-1",
+      "version": "v7"
+    },
+    {
+      "name": "Jenya: member, unused book, day 44",
+      "outcome": "refund",
+      "rule": "R-3",
+      "version": "v7"
+    },
+    {
+      "name": "Dinky: sale item, not damaged, day 12",
+      "outcome": "store_credit",
+      "rule": "R-2",
+      "version": "v7"
+    },
+    {
+      "name": "Hansini: standard return, day 31",
+      "outcome": "refuse",
+      "rule": "R-5",
+      "version": "v7"
+    },
+    {
+      "name": "Tanishka: member, delivered under v6, day 40",
+      "outcome": "refuse",
+      "rule": "R-5",
+      "version": "v6"
+    },
+    {
+      "name": "Order delivered before any policy version",
+      "outcome": "escalate",
+      "rule": null,
+      "version": null
+    }
+  ],
+  "check_v7": {
+    "gaps": 0,
+    "overlaps": [
+      [
+        "R-1",
+        "R-5"
+      ],
+      [
+        "R-2",
+        "R-5"
+      ],
+      [
+        "R-3",
+        "R-5"
+      ],
+      [
+        "R-4",
+        "R-5"
+      ]
+    ],
+    "unreachable": []
+  },
+  "check_v7_without_catch_all": {
+    "gaps": 22,
+    "example_gap": {
+      "damaged": true,
+      "sale": true,
+      "member": true,
+      "days": 91
+    }
+  },
+  "v6_to_v7_changes": 6
+}
