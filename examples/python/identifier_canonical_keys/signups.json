@@ -1,0 +1,16 @@
+{
+  "_note": "Synthetic sign-ups for Belgavi's Book Store. Escapes keep invisible and look-alike characters explicit. expect: same = the same identifier as an existing account, lookalike = a different identifier that renders alike, reject = should not be stored, distinct = a genuinely different name.",
+  "existing": ["geetha", "jenya.reads", "tanishka.café", "dinky", "jenya.strasse"],
+  "attempts": [
+    {"name": "Geetha", "expect": "same", "why": "upper-case G"},
+    {"name": "ＧＥＥＴＨＡ", "expect": "same", "why": "fullwidth letters"},
+    {"name": "tanishka.café", "expect": "same", "why": "e plus combining acute (NFD)"},
+    {"name": "dinKy", "expect": "same", "why": "KELVIN SIGN instead of K"},
+    {"name": "Jenya.Reads", "expect": "same", "why": "mixed case"},
+    {"name": "gеetha", "expect": "lookalike", "why": "CYRILLIC SMALL LETTER IE"},
+    {"name": "geet‍ha", "expect": "reject", "why": "ZERO WIDTH JOINER"},
+    {"name": "hansini ", "expect": "reject", "why": "trailing NO-BREAK SPACE"},
+    {"name": "jenya.straße", "expect": "distinct", "why": "sharp s: distinct under RFC 8265, equal under case folding"},
+    {"name": "hansini", "expect": "distinct", "why": "a new name"}
+  ]
+}

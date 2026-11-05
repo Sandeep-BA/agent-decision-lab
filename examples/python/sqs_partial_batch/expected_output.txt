@@ -1,0 +1,3 @@
+raise           invocations=5 deliveries=50 redeliveries=40 dead_lettered=m01,m02,m03,m04,m05,m06,m07,m08,m09,m10 applied=9
+partial         invocations=5 deliveries=15 redeliveries=5 dead_lettered=m07 applied=9
+partial_bad_id  invocations=5 deliveries=50 redeliveries=40 dead_lettered=m01,m02,m03,m04,m05,m06,m07,m08,m09,m10 applied=9

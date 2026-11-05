@@ -1,0 +1,13 @@
+{"_note": "Ten synthetic return requests for Belgavi's Book Store. m07 has no order_id (poison); m03 times out on its first attempt only.",
+ "messages": [
+  {"id": "m01", "body": {"request_id": "RET-501", "order_id": "BK-40101"}},
+  {"id": "m02", "body": {"request_id": "RET-502", "order_id": "BK-40102"}},
+  {"id": "m03", "body": {"request_id": "RET-503", "order_id": "BK-40103"}},
+  {"id": "m04", "body": {"request_id": "RET-504", "order_id": "BK-40104"}},
+  {"id": "m05", "body": {"request_id": "RET-505", "order_id": "BK-40105"}},
+  {"id": "m06", "body": {"request_id": "RET-506", "order_id": "BK-40106"}},
+  {"id": "m07", "body": {"request_id": "RET-507"}},
+  {"id": "m08", "body": {"request_id": "RET-508", "order_id": "BK-40108"}},
+  {"id": "m09", "body": {"request_id": "RET-509", "order_id": "BK-40109"}},
+  {"id": "m10", "body": {"request_id": "RET-510", "order_id": "BK-40110"}}],
+ "transient_failures": {"m03": 1}}

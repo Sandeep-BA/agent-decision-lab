@@ -1,0 +1,7 @@
+runs 2000, traces 5081, runs with more than one trace 1500
+threshold for p=0.1: e6666666666666
+tracestate for run-00042: ot=rv:8a84c66f6e2dda
+p=0.10 trace kept whole   51  partial  389  dropped 1560  traces kept  485 of 5081
+p=0.10 run   kept whole  203  partial    0  dropped 1797  traces kept  530 of 5081
+p=0.25 trace kept whole  161  partial  811  dropped 1028  traces kept 1247 of 5081
+p=0.25 run   kept whole  504  partial    0  dropped 1496  traces kept 1279 of 5081

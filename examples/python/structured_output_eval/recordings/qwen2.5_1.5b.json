@@ -1,0 +1,52 @@
+{
+ "model": "qwen2.5:1.5b",
+ "ollama": "0.40.12",
+ "options": {
+  "temperature": 0,
+  "seed": 7
+ },
+ "outputs": {
+  "prompt": {
+   "c01": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40211\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c02": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40388\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c03": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-40412\",\n  \"amount_inr\": 649,\n  \"wants_person\": true\n}",
+   "c04": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40450\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c05": "{\n  \"case_type\": \"address_change\",\n  \"order_id\": \"BK-40501\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c06": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-000125\",\n  \"amount_inr\": 1250,\n  \"wants_person\": true\n}",
+   "c07": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-00001\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}",
+   "c08": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40622\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c09": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40705\",\n  \"amount_inr\": 899,\n  \"wants_person\": true\n}",
+   "c10": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40733\",\n  \"amount_inr\": 1499,\n  \"wants_person\": true\n}",
+   "c11": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40790\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c12": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-12345\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}"
+  },
+  "json": {
+   "c01": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40211\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c02": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40388\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c03": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-40412\",\n  \"amount_inr\": 649,\n  \"wants_person\": true\n}",
+   "c04": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40450\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c05": "{\n  \"case_type\": \"address_change\",\n  \"order_id\": \"BK-40501\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c06": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-000125\",\n  \"amount_inr\": 1250,\n  \"wants_person\": true\n}",
+   "c07": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-00001\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}",
+   "c08": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40622\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c09": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40705\",\n  \"amount_inr\": 899,\n  \"wants_person\": true\n}",
+   "c10": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40733\",\n  \"amount_inr\": 1499,\n  \"wants_person\": true\n}",
+   "c11": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40790\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c12": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-12345\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}"
+  },
+  "schema": {
+   "c01": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40211\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c02": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40388\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c03": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-40412\",\n  \"amount_inr\": 649,\n  \"wants_person\": true\n}",
+   "c04": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40450\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c05": "{\n  \"case_type\": \"address_change\",\n  \"order_id\": \"BK-40501\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c06": "{\n  \"case_type\": \"refund\",\n  \"order_id\": \"BK-00012\",\n  \"amount_inr\": 1250,\n  \"wants_person\": true\n}",
+   "c07": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-00001\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}",
+   "c08": "{\n  \"case_type\": \"damaged_item\",\n  \"order_id\": \"BK-40622\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c09": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40705\",\n  \"amount_inr\": 899,\n  \"wants_person\": true\n}",
+   "c10": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40733\",\n  \"amount_inr\": 1499,\n  \"wants_person\": true\n}",
+   "c11": "{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40790\",\n  \"amount_inr\": null,\n  \"wants_person\": true\n}",
+   "c12": "{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-12345\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}"
+  }
+ }
+}

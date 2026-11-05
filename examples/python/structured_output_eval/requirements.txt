@@ -1,0 +1,2 @@
+# Standard library only. Tested with Python 3.13.5.
+# Live runs need Ollama (tested 0.40.12) with: ollama pull qwen2.5:0.5b-instruct and ollama pull qwen2.5:1.5b

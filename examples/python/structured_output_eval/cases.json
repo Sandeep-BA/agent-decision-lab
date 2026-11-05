@@ -1,0 +1,15 @@
+{"_note": "Twelve synthetic help-desk messages for Belgavi's Book Store with hand-written gold labels. Author: Sandeep Belgavi.",
+ "cases": [
+  {"id": "c01", "text": "Hi, order BK-40211 arrived with a torn cover on the atlas. I'd like a replacement please.", "gold": {"case_type": "damaged_item", "order_id": "BK-40211", "amount_inr": null, "wants_person": false}},
+  {"id": "c02", "text": "Where is my parcel? It was due Monday. Order number BK-40388.", "gold": {"case_type": "late_delivery", "order_id": "BK-40388", "amount_inr": null, "wants_person": false}},
+  {"id": "c03", "text": "Please refund the 649 rupees for the cookbook, I cancelled before it shipped. BK-40412", "gold": {"case_type": "refund", "order_id": "BK-40412", "amount_inr": 649, "wants_person": false}},
+  {"id": "c04", "text": "I want to send back two novels from order BK-40450, they are not what I expected.", "gold": {"case_type": "return", "order_id": "BK-40450", "amount_inr": null, "wants_person": false}},
+  {"id": "c05", "text": "Can you change the delivery address for BK-40501 to my office? Same city.", "gold": {"case_type": "address_change", "order_id": "BK-40501", "amount_inr": null, "wants_person": false}},
+  {"id": "c06", "text": "This is the third time I am writing. Let me talk to a human about my missing refund of Rs 1,250.", "gold": {"case_type": "refund", "order_id": null, "amount_inr": 1250, "wants_person": true}},
+  {"id": "c07", "text": "Do you have the new Tamil translation of the poetry anthology in stock?", "gold": {"case_type": "other", "order_id": null, "amount_inr": null, "wants_person": false}},
+  {"id": "c08", "text": "My order bk 40622 came with pages 40 to 72 missing. Very disappointed.", "gold": {"case_type": "damaged_item", "order_id": "BK-40622", "amount_inr": null, "wants_person": false}},
+  {"id": "c09", "text": "Two weeks and still nothing. Order BK-40705. I paid 899. Please get someone to call me.", "gold": {"case_type": "late_delivery", "order_id": "BK-40705", "amount_inr": 899, "wants_person": true}},
+  {"id": "c10", "text": "I returned the dictionary last week (BK-40733) but have not seen the 1499 back on my card.", "gold": {"case_type": "refund", "order_id": "BK-40733", "amount_inr": 1499, "wants_person": false}},
+  {"id": "c11", "text": "Wrong book delivered for order BK-40790, I ordered volume 2 and got volume 1. I will return it.", "gold": {"case_type": "return", "order_id": "BK-40790", "amount_inr": null, "wants_person": false}},
+  {"id": "c12", "text": "Thanks for the quick help yesterday, everything is sorted now!", "gold": {"case_type": "other", "order_id": null, "amount_inr": null, "wants_person": false}}
+ ]}

@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic GraphQL responses for Belgavi's Book Store, shaped as the GraphQL specification describes: field errors produce null plus an errors entry with a path. Author: Sandeep Belgavi.",
+  "complete": {"data": {"order": {"id": "BK-40211", "status": "SHIPPED", "placedAt": "2026-11-01T09:12:00+05:30",
+    "shipment": {"carrier": "Speedpost", "lastEvent": "Out for delivery"},
+    "lines": [{"sku": "ATLAS-01", "title": "World Atlas", "quantity": 1}]}}},
+  "shipment_failed": {"data": {"order": {"id": "BK-40211", "status": "SHIPPED", "placedAt": "2026-11-01T09:12:00+05:30",
+    "shipment": null,
+    "lines": [{"sku": "ATLAS-01", "title": "World Atlas", "quantity": 1}]}},
+    "errors": [{"message": "carrier service timed out", "path": ["order", "shipment"]}]},
+  "order_null_propagated": {"data": {"order": null},
+    "errors": [{"message": "inventory service unavailable", "path": ["order", "lines", 0, "title"]}]},
+  "request_error": {"errors": [{"message": "Variable $id of type ID! was not provided."}]}
+}

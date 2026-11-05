@@ -1,0 +1,52 @@
+{
+ "model": "qwen2.5:0.5b-instruct",
+ "ollama": "0.40.12",
+ "options": {
+  "temperature": 0,
+  "seed": 7
+ },
+ "outputs": {
+  "prompt": {
+   "c01": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40211\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c02": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40388\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c03": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40412\",\n  \"amount_inr\": 649,\n  \"wants_person\": false\n}\n```",
+   "c04": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40450\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c05": "```json\n{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40501\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c06": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": null,\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c07": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": null,\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c08": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"bk-40622\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c09": "```json\n{\n  \"case_type\": \"late_delivery\",\n  \"order_id\": \"BK-40705\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c10": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40733\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c11": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": \"BK-40790\",\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```",
+   "c12": "```json\n{\n  \"case_type\": \"return\",\n  \"order_id\": null,\n  \"amount_inr\": null,\n  \"wants_person\": false\n}\n```"
+  },
+  "json": {
+   "c01": "{\"case_type\": \"return\", \"order_id\": \"BK-40211\", \"amount_inr\": null, \"wants_person\": true}",
+   "c02": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40388\", \"amount_inr\": null, \"wants_person\": false}",
+   "c03": "{\"case_type\": \"return\", \"order_id\": \"BK-40412\", \"amount_inr\": 649, \"wants_person\": false}",
+   "c04": "{\"case_type\": \"return\", \"order_id\": \"BK-40450\", \"amount_inr\": null, \"wants_person\": false}",
+   "c05": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40501\", \"amount_inr\": null, \"wants_person\": false}",
+   "c06": "{\"case_type\": \"late_delivery\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": true}",
+   "c07": "{\"case_type\": \"return\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": false}",
+   "c08": "{\"case_type\": \"return\", \"order_id\": \"bk-40622\", \"amount_inr\": null, \"wants_person\": true}",
+   "c09": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40705\", \"amount_inr\": 899, \"wants_person\": false}",
+   "c10": "{\"case_type\": \"return\", \"order_id\": \"BK-40733\", \"amount_inr\": null, \"wants_person\": false}",
+   "c11": "{\"case_type\": \"return\", \"order_id\": \"BK-40790\", \"amount_inr\": null, \"wants_person\": false}",
+   "c12": "{\"case_type\": \"return\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": false}"
+  },
+  "schema": {
+   "c01": "{\"case_type\": \"return\", \"order_id\": \"BK-40211\", \"amount_inr\": null, \"wants_person\": true}",
+   "c02": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40388\", \"amount_inr\": null, \"wants_person\": false}",
+   "c03": "{\"case_type\": \"return\", \"order_id\": \"BK-40412\", \"amount_inr\": 649, \"wants_person\": false}",
+   "c04": "{\"case_type\": \"return\", \"order_id\": \"BK-40450\", \"amount_inr\": null, \"wants_person\": false}",
+   "c05": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40501\", \"amount_inr\": null, \"wants_person\": false}",
+   "c06": "{\"case_type\": \"late_delivery\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": true}",
+   "c07": "{\"case_type\": \"return\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": false}",
+   "c08": "{\"case_type\": \"return\", \"order_id\": \"BK-40622\", \"amount_inr\": null, \"wants_person\": false}",
+   "c09": "{\"case_type\": \"late_delivery\", \"order_id\": \"BK-40705\", \"amount_inr\": 899, \"wants_person\": false}",
+   "c10": "{\"case_type\": \"return\", \"order_id\": \"BK-40733\", \"amount_inr\": null, \"wants_person\": false}",
+   "c11": "{\"case_type\": \"return\", \"order_id\": \"BK-40790\", \"amount_inr\": null, \"wants_person\": false}",
+   "c12": "{\"case_type\": \"return\", \"order_id\": null, \"amount_inr\": null, \"wants_person\": false}"
+  }
+ }
+}
