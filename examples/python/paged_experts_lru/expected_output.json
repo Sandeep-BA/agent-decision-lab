@@ -1,0 +1,74 @@
+{
+  "default": {
+    "decode_miss_rate_pct": 5.5,
+    "paged_per_decode_step_mb": 51.3,
+    "transfer_ms_per_decode_step": 1.03,
+    "prefill_paged_gb": 4.2,
+    "prefill_waves": 2,
+    "capture_limit_requests": 11,
+    "decode_captured": true,
+    "decode_steps_with_several_waves": 0,
+    "gpu_expert_gb": 10.73,
+    "pinned_host_gb": 14.93
+  },
+  "no_locality": {
+    "decode_miss_rate_pct": 19.4,
+    "paged_per_decode_step_mb": 181.4,
+    "transfer_ms_per_decode_step": 3.63,
+    "prefill_paged_gb": 4.2,
+    "prefill_waves": 2,
+    "capture_limit_requests": 11,
+    "decode_captured": true,
+    "decode_steps_with_several_waves": 0,
+    "gpu_expert_gb": 10.73,
+    "pinned_host_gb": 14.93
+  },
+  "uniform_routing": {
+    "decode_miss_rate_pct": 26.8,
+    "paged_per_decode_step_mb": 250.2,
+    "transfer_ms_per_decode_step": 5.0,
+    "prefill_paged_gb": 4.2,
+    "prefill_waves": 2,
+    "capture_limit_requests": 11,
+    "decode_captured": true,
+    "decode_steps_with_several_waves": 0,
+    "gpu_expert_gb": 10.73,
+    "pinned_host_gb": 14.93
+  },
+  "all_resident": {
+    "decode_miss_rate_pct": 0.0,
+    "paged_per_decode_step_mb": 0.0,
+    "transfer_ms_per_decode_step": 0.0,
+    "prefill_paged_gb": 0.0,
+    "prefill_waves": 1,
+    "capture_limit_requests": 16,
+    "decode_captured": true,
+    "decode_steps_with_several_waves": 0,
+    "gpu_expert_gb": 14.93,
+    "pinned_host_gb": 14.93
+  },
+  "small_k_four_requests": {
+    "decode_miss_rate_pct": 27.6,
+    "paged_per_decode_step_mb": 884.1,
+    "transfer_ms_per_decode_step": 17.68,
+    "prefill_paged_gb": 11.9,
+    "prefill_waves": 5,
+    "capture_limit_requests": 3,
+    "decode_captured": false,
+    "decode_steps_with_several_waves": 146,
+    "gpu_expert_gb": 3.03,
+    "pinned_host_gb": 14.93
+  },
+  "half_bandwidth": {
+    "decode_miss_rate_pct": 5.5,
+    "paged_per_decode_step_mb": 51.3,
+    "transfer_ms_per_decode_step": 2.05,
+    "prefill_paged_gb": 4.2,
+    "prefill_waves": 2,
+    "capture_limit_requests": 11,
+    "decode_captured": true,
+    "decode_steps_with_several_waves": 0,
+    "gpu_expert_gb": 10.73,
+    "pinned_host_gb": 14.93
+  }
+}

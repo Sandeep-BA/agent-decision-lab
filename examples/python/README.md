@@ -5,7 +5,7 @@
 Small, self-contained Python programs that accompany the agent architecture guides on
 aicassindra.com. Each directory is independent, uses the Python standard library unless its
 `requirements.txt` pins a package (3.11 or newer), ships synthetic fixtures, and has its own README, tests and limitations.
-None of them calls a model provider; they exercise the runtime mechanics around an agent.
+None of them calls a model provider; they exercise the runtime mechanics around an agent. The only network access is the optional live mode of `embedding_truncation_probe`, which calls a local Ollama server.
 
 | Example | Guide | Run the tests |
 | --- | --- | --- |
@@ -49,6 +49,12 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`structured_output_eval`](structured_output_eval/) | Schema-constrained output on small local models: validity versus correctness, with recorded Ollama runs | `python -m unittest discover -s examples/python/structured_output_eval -p "test_*.py"` |
 | [`identifier_canonical_keys`](identifier_canonical_keys/) | Unicode usernames: a canonical key for uniqueness and a confusables skeleton for review | `python -m unittest discover -s examples/python/identifier_canonical_keys -p "test_*.py"` |
 | [`sqs_partial_batch`](sqs_partial_batch/) | Lambda and SQS: partial batch responses, poison messages and FIFO order | `python -m unittest discover -s examples/python/sqs_partial_batch -p "test_*.py"` |
+| [`agent_patch_semantics`](agent_patch_semantics/) | Partial updates from agents: merge patch nulls versus JSON Patch tests | `python -m unittest discover -s examples/python/agent_patch_semantics -p "test_*.py"` |
+| [`decision_table_policy`](decision_table_policy/) | Business rules in a versioned decision table, with gap and overlap checks | `python -m unittest discover -s examples/python/decision_table_policy -p "test_*.py"` |
+| [`embedding_truncation_probe`](embedding_truncation_probe/) | Silent truncation of embedding inputs; offline tests, optional live probe against local Ollama | `python -m unittest discover -s examples/python/embedding_truncation_probe -p "test_*.py"` |
+| [`job_failure_policy`](job_failure_policy/) | Kubernetes Job retries: backoffLimit, podFailurePolicy and disruptions (a model of the documented rules) | `python -m unittest discover -s examples/python/job_failure_policy -p "test_*.py"` |
+| [`paged_experts_lru`](paged_experts_lru/) | Paged MoE experts: LRU residency, waves and the decode capture limit | `python -m unittest discover -s examples/python/paged_experts_lru -p "test_*.py"` |
+| [`pydantic_2_14_2_extras`](pydantic_2_14_2_extras/) | pydantic 2.14.2 extra-data validation fixes, one pinned environment per version | `python -m unittest discover -s examples/python/pydantic_2_14_2_extras -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.

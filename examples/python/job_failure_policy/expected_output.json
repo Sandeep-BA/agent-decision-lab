@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Default, backoffLimit 6",
+    "result": "succeeded",
+    "reason": "Pod succeeded",
+    "pods": 4,
+    "counted": 3,
+    "t": 430,
+    "backoff": 70
+  },
+  {
+    "name": "Default, backoffLimit 2",
+    "result": "failed",
+    "reason": "BackoffLimitExceeded",
+    "pods": 3,
+    "counted": 3,
+    "t": 270,
+    "backoff": 30
+  },
+  {
+    "name": "Article policy, backoffLimit 3",
+    "result": "succeeded",
+    "reason": "Pod succeeded",
+    "pods": 4,
+    "counted": 1,
+    "t": 370,
+    "backoff": 10
+  },
+  {
+    "name": "Article policy, malformed feed first",
+    "result": "failed",
+    "reason": "FailJob rule",
+    "pods": 1,
+    "counted": 0,
+    "t": 120,
+    "backoff": 0
+  },
+  {
+    "name": "Default, malformed feed",
+    "result": "failed",
+    "reason": "BackoffLimitExceeded",
+    "pods": 7,
+    "counted": 7,
+    "t": 1470,
+    "backoff": 630
+  },
+  {
+    "name": "Article policy, OOM every time",
+    "result": "failed",
+    "reason": "BackoffLimitExceeded",
+    "pods": 4,
+    "counted": 4,
+    "t": 550,
+    "backoff": 70
+  },
+  {
+    "name": "Article policy, node pressure, no deadline",
+    "result": "active",
+    "reason": "model stopped after 100 Pods",
+    "pods": 100,
+    "counted": 0,
+    "t": 6000,
+    "backoff": 0
+  },
+  {
+    "name": "Article policy, node pressure, deadline 3600 s",
+    "result": "failed",
+    "reason": "DeadlineExceeded",
+    "pods": 60,
+    "counted": 0,
+    "t": 3600,
+    "backoff": 0
+  }
+]

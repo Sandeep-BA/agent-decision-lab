@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic nights of the Belgavi's Book Store catalogue import Job. Outcomes repeat their last entry.",
+  "cases": [
+    {"name": "Default, backoffLimit 6", "spec": {"backoffLimit": 6}, "outcomes": ["evict", "evict", "exit1", "ok"]},
+    {"name": "Default, backoffLimit 2", "spec": {"backoffLimit": 2}, "outcomes": ["evict", "evict", "exit1", "ok"]},
+    {"name": "Article policy, backoffLimit 3", "spec": {"backoffLimit": 3, "articlePolicy": true}, "outcomes": ["evict", "evict", "exit1", "ok"]},
+    {"name": "Article policy, malformed feed first", "spec": {"backoffLimit": 3, "articlePolicy": true}, "outcomes": ["exit3"]},
+    {"name": "Default, malformed feed", "spec": {"backoffLimit": 6}, "outcomes": ["exit3"]},
+    {"name": "Article policy, OOM every time", "spec": {"backoffLimit": 3, "articlePolicy": true}, "outcomes": ["oom"]},
+    {"name": "Article policy, node pressure, no deadline", "spec": {"backoffLimit": 3, "articlePolicy": true}, "outcomes": ["pressure"]},
+    {"name": "Article policy, node pressure, deadline 3600 s", "spec": {"backoffLimit": 3, "articlePolicy": true, "activeDeadlineSeconds": 3600}, "outcomes": ["pressure"]}
+  ]
+}

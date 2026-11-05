@@ -1,0 +1,20 @@
+{
+  "_note": "Synthetic Belgavi's Book Store customer record. Not real data.",
+  "record": {
+    "customer_id": "C-2207",
+    "name": "Tanishka",
+    "phone": "+91 90000 11111",
+    "addresses": [
+      {"label": "home", "line1": "3 Lake View Lane"},
+      {"label": "school", "line1": "8 Library Street"}
+    ],
+    "marketing_opt_in": false
+  },
+  "website_change": {"marketing_opt_in": true},
+  "model_merge_patch": {
+    "addresses": [{"label": "office", "line1": "14 Mill Road"}],
+    "phone": null,
+    "marketing_opt_in": false
+  },
+  "intent": [["append", "addresses", {"label": "office", "line1": "14 Mill Road"}]]
+}
