@@ -1,0 +1,12 @@
+qwen2.5:0.5b-instruct  prompt parsed  0/12  schema-valid  0/12  all fields right  0/12  (case_type 0, order_id 0, amount_inr 0, wants_person 0)
+qwen2.5:0.5b-instruct  json   parsed 12/12  schema-valid 11/12  all fields right  3/12  (case_type 4, order_id 11, amount_inr 10, wants_person 9)
+qwen2.5:0.5b-instruct  schema parsed 12/12  schema-valid 12/12  all fields right  3/12  (case_type 4, order_id 12, amount_inr 10, wants_person 10)
+qwen2.5:1.5b           prompt parsed 12/12  schema-valid 11/12  all fields right  1/12  (case_type 9, order_id 9, amount_inr 12, wants_person 4)
+qwen2.5:1.5b           json   parsed 12/12  schema-valid 11/12  all fields right  1/12  (case_type 9, order_id 9, amount_inr 12, wants_person 4)
+qwen2.5:1.5b           schema parsed 12/12  schema-valid 12/12  all fields right  1/12  (case_type 9, order_id 9, amount_inr 12, wants_person 4)
+qwen2.5:0.5b-instruct  prompt valid  0/12  all right  0/12  wrong order ids: schema catches -, grounding catches -, missed -
+qwen2.5:0.5b-instruct  json   valid 11/12  all right  3/12  wrong order ids: schema catches [('c08', 'bk-40622')], grounding catches -, missed -
+qwen2.5:0.5b-instruct  schema valid 12/12  all right  3/12  wrong order ids: schema catches -, grounding catches -, missed -
+qwen2.5:1.5b           prompt valid 11/12  all right  1/12  wrong order ids: schema catches [('c06', 'BK-000125')], grounding catches [('c07', 'BK-00001'), ('c12', 'BK-12345')], missed -
+qwen2.5:1.5b           json   valid 11/12  all right  1/12  wrong order ids: schema catches [('c06', 'BK-000125')], grounding catches [('c07', 'BK-00001'), ('c12', 'BK-12345')], missed -
+qwen2.5:1.5b           schema valid 12/12  all right  1/12  wrong order ids: schema catches -, grounding catches [('c06', 'BK-00012'), ('c07', 'BK-00001'), ('c12', 'BK-12345')], missed -

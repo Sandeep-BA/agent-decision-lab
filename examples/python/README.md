@@ -43,6 +43,12 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`tool_selection_regression`](tool_selection_regression/) | Tool descriptions as prompts: recorded selection runs, per-case diffs and new failures | `python -m unittest discover -s examples/python/tool_selection_regression -p "test_*.py"` |
 | [`table_row_chunks`](table_row_chunks/) | Tables in a retrieval corpus: row serialization with headers and a strict answerability check | `python -m unittest discover -s examples/python/table_row_chunks -p "test_*.py"` |
 | [`model_fallback_refusal_policy`](model_fallback_refusal_policy/) | Refusals and ModelFallback in pydantic-ai 2.65: the default and an explicit stop policy, pinned by tests (needs `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/model_fallback_refusal_policy -p "test_*.py"` |
+| [`run_keyed_sampling`](run_keyed_sampling/) | Sampling whole agent runs: explicit randomness from the run id instead of per-trace decisions | `python -m unittest discover -s examples/python/run_keyed_sampling -p "test_*.py"` |
+| [`graphql_operation_tools`](graphql_operation_tools/) | Agents calling a GraphQL API: registered operations as tools, a per-run cost budget and partial results | `python -m unittest discover -s examples/python/graphql_operation_tools -p "test_*.py"` |
+| [`tool_definition_budget`](tool_definition_budget/) | What tool definitions cost per request: token counts and cache arithmetic (needs `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/tool_definition_budget -p "test_*.py"` |
+| [`structured_output_eval`](structured_output_eval/) | Schema-constrained output on small local models: validity versus correctness, with recorded Ollama runs | `python -m unittest discover -s examples/python/structured_output_eval -p "test_*.py"` |
+| [`identifier_canonical_keys`](identifier_canonical_keys/) | Unicode usernames: a canonical key for uniqueness and a confusables skeleton for review | `python -m unittest discover -s examples/python/identifier_canonical_keys -p "test_*.py"` |
+| [`sqs_partial_batch`](sqs_partial_batch/) | Lambda and SQS: partial batch responses, poison messages and FIFO order | `python -m unittest discover -s examples/python/sqs_partial_batch -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.

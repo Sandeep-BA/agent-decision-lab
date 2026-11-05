@@ -1,0 +1,5 @@
+concise  16 tools   1327 tokens  largest [(135, 'create_return'), (133, 'update_address'), (129, 'issue_refund')]  smallest (44, 'get_customer')
+verbose  16 tools   3378 tokens  largest [(273, 'create_return'), (259, 'update_address'), (257, 'issue_refund')]  smallest (171, 'get_customer')
+always-loaded subset (get_order, list_orders, add_case_note, escalate_case): 830 tokens
+concise  12 steps uncached  19356  cached   3791  cached with one tool-list change   5646
+verbose  12 steps uncached  43968  cached   8610  cached with one tool-list change  12824

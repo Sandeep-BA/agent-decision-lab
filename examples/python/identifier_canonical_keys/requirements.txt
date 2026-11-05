@@ -1,0 +1,2 @@
+# Standard library only. Tested with Python 3.13.5 (unicodedata 15.1.0) on Windows.
+# No third-party packages are needed.

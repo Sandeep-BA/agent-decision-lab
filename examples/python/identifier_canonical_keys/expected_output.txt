@@ -1,0 +1,16 @@
+Unicode data in this Python: 15.1.0
+Geetha                   same      raw UNIQUE=stored SQLite NOCASE=duplicate lower()=duplicate username_key=duplicate | -
+\uff27\uff25\uff25\uff34\uff28\uff21 same      raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=duplicate | -
+tanishka.cafe\u0301      same      raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=duplicate | -
+din\u212ay               same      raw UNIQUE=stored SQLite NOCASE=stored lower()=duplicate username_key=duplicate | -
+Jenya.Reads              same      raw UNIQUE=stored SQLite NOCASE=duplicate lower()=duplicate username_key=duplicate | -
+g\u0435etha              lookalike raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=stored | looks like geetha
+geet\u200dha             reject    raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=rejected | U+200D ZERO WIDTH JOINER is not allowed (Cf)
+hansini\xa0              reject    raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=rejected | U+00A0 NO-BREAK SPACE is not allowed (Zs)
+jenya.stra\xdfe          distinct  raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=stored | -
+hansini                  distinct  raw UNIQUE=stored SQLite NOCASE=stored lower()=stored username_key=stored | -
+raw UNIQUE     wrong outcomes: 7 of 10
+SQLite NOCASE  wrong outcomes: 5 of 10
+lower()        wrong outcomes: 4 of 10
+username_key   wrong outcomes: 0 of 10
+look-alike flags raised: 1
