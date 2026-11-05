@@ -39,10 +39,13 @@ p=0.25 run   kept whole  504  partial    0  dropped 1496  traces kept 1279 of 50
 
 ## Using it with an SDK
 
-Set `tracestate: ot=rv:<rv_for_run(run_id)>` on the root context of every trace that belongs to the run
-(the first request, each resume, each callback), and configure a sampler that honours explicit
-randomness (the OpenTelemetry ProbabilitySampler, under ParentBased). Check your SDK version: the
-deprecated TraceIdRatioBased sampler uses the TraceID and ignores `rv`.
+The OpenTelemetry specification lets a root span carry `tracestate: ot=rv:<value>` and requires samplers
+not to overwrite it, so set it from `rv_for_run(run_id)` for every trace that belongs to the run (the
+first request, each resume, each callback) and use a sampler that reads explicit randomness, such as the
+ProbabilitySampler. SDK support varies and was not tested here. In many SDKs the only way to give a root
+span a tracestate is a remote parent context, and a ParentBased sampler then follows that parent's sampled
+flag instead of calling the root sampler, so compute the decision with `keep()` and set the flag yourself,
+or check how your SDK handles it. The deprecated TraceIdRatioBased sampler decides from the TraceID, not `rv`.
 
 ## Limitations
 
