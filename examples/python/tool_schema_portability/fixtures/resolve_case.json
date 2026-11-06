@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]{4}$", "minLength": 9, "maxLength": 9},
+    "action": {"type": "string", "enum": ["refund", "replace", "escalate"]},
+    "amount": {"type": "number", "minimum": 0, "maximum": 500, "multipleOf": 0.01},
+    "note": {"anyOf": [{"type": "string"}, {"type": "null"}]}
+  },
+  "required": ["case_id", "action", "amount"],
+  "additionalProperties": false
+}
