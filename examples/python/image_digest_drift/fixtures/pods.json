@@ -1,0 +1,347 @@
+{
+ "apiVersion": "v1",
+ "kind": "List",
+ "items": [
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p0",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-1",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p1",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-2",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p2",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-3",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p3",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-1",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p4",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-2",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p5",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-3",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a4f1a"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p6",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-new",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "recs-6d9f8c7b5-p7",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "recs-6d9f8c7b5"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-new",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/recs:2.4",
+      "imageID": "registry.example/recs@sha256:9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e9c7e"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "search-5b7c9d-p0",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "search-5b7c9d"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-1",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imageID": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "search-5b7c9d-p1",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "search-5b7c9d"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-2",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imageID": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa"
+     }
+    ]
+   }
+  },
+  {
+   "metadata": {
+    "name": "search-5b7c9d-p2",
+    "namespace": "shop",
+    "ownerReferences": [
+     {
+      "kind": "ReplicaSet",
+      "name": "search-5b7c9d"
+     }
+    ]
+   },
+   "spec": {
+    "nodeName": "node-3",
+    "containers": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imagePullPolicy": "IfNotPresent"
+     }
+    ]
+   },
+   "status": {
+    "containerStatuses": [
+     {
+      "name": "recs",
+      "image": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa",
+      "imageID": "registry.example/search@sha256:77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa77aa"
+     }
+    ]
+   }
+  }
+ ]
+}

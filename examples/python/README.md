@@ -55,8 +55,18 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`job_failure_policy`](job_failure_policy/) | Kubernetes Job retries: backoffLimit, podFailurePolicy and disruptions (a model of the documented rules) | `python -m unittest discover -s examples/python/job_failure_policy -p "test_*.py"` |
 | [`paged_experts_lru`](paged_experts_lru/) | Paged MoE experts: LRU residency, waves and the decode capture limit | `python -m unittest discover -s examples/python/paged_experts_lru -p "test_*.py"` |
 | [`pydantic_2_14_2_extras`](pydantic_2_14_2_extras/) | pydantic 2.14.2 extra-data validation fixes, one pinned environment per version | `python -m unittest discover -s examples/python/pydantic_2_14_2_extras -p "test_*.py"` |
+| [`agent_hold_confirm`](agent_hold_confirm/) | Holding the last copy while a model thinks: a long transaction versus an expiring hold and conditional confirm, on SQLite | `python -m unittest discover -s examples/python/agent_hold_confirm -p "test_*.py"` |
+| [`enum_boundary`](enum_boundary/) | Enum values between agents and services: alias table and typed refusal on write, UNKNOWN with a category on read | `python -m unittest discover -s examples/python/enum_boundary -p "test_*.py"` |
+| [`tool_schema_portability`](tool_schema_portability/) | One tool schema for OpenAI strict, Claude strict and the google-genai conversion: documented subsets and a portable core (optional `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/tool_schema_portability -p "test_*.py"` |
+| [`eval_flake_classifier`](eval_flake_classifier/) | Flaky eval cases: planted harness faults, replay-based classification and repeat-run arithmetic | `python -m unittest discover -s examples/python/eval_flake_classifier -p "test_*.py"` |
+| [`image_digest_drift`](image_digest_drift/) | Kubernetes pods of one workload running different image digests, from kubectl JSON | `python -m unittest discover -s examples/python/image_digest_drift -p "test_*.py"` |
+| [`http_framing_toy`](http_framing_toy/) | Two lenient HTTP/1.1 framers that desynchronise on a CL.TE probe, and a strict RFC 9112 framer | `python -m unittest discover -s examples/python/http_framing_toy -p "test_*.py"` |
+| [`bounded_json_format`](bounded_json_format/) | JSON indentation growth by nesting depth, and formatting only within size and depth limits | `python -m unittest discover -s examples/python/bounded_json_format -p "test_*.py"` |
+| [`genai_v1_upgrade_check`](genai_v1_upgrade_check/) | google-genai 3.0.0 defaults pinned offline: v1, httpx2 and request paths (needs `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/genai_v1_upgrade_check -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
+
+A Java example, [`../java/bigdecimal_keys`](../java/bigdecimal_keys/), shows BigDecimal equality and scale with plain `javac` and `java` (JDK 17 or newer).
 
 A Go example, [`../go/llm_call_budget`](../go/llm_call_budget/), tests model-call budgets in ADK Go v2.7.0 with `go test` (Go 1.26.10 or newer).
