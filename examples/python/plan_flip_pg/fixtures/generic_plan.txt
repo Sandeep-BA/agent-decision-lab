@@ -1,0 +1,5 @@
+Limit (actual rows=20.00 loops=1)
+  ->  Index Scan Backward using orders_placed_at on orders (actual rows=20.00 loops=1)
+        Filter: (store_id = $1)
+Planning Time: 0.023 ms
+Execution Time: 14.000 ms

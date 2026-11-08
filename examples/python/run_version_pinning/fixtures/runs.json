@@ -1,0 +1,6 @@
+{"live_bundles": ["agent-2026.11.2", "agent-2026.11.3"], "migrations": [[3, 4]], "current_schema": 4,
+ "runs": [
+  {"run_id": "CASE-6133 Thursday", "bundle": "agent-2026.11.2", "checkpoint_schema": 3},
+  {"run_id": "CASE-6133 three weeks later", "bundle": "agent-2026.10.9", "checkpoint_schema": 3},
+  {"run_id": "CASE-5901 very old", "bundle": "agent-2026.08.1", "checkpoint_schema": 2}
+ ]}
