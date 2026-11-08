@@ -13,12 +13,12 @@ python -m unittest discover -s examples/python/stream_disconnect_probe -p "test_
 python examples/python/stream_disconnect_probe/probe.py
 ```
 
-## Expected output (optional real run)
+## Expected shape (optional real run)
 ```
 control median B first-chunk wait 1.95 s
 disconnect median B first-chunk wait 0.055 s
 ```
-Those figures are one local run on one small model; yours will differ. The unit tests use a stub server, so they make no model call.
+Those figures are from the article's run of an equivalent script on one small model, not from this exact file; expect the same shape, not the same numbers. The unit tests use a stub server, so they make no model call.
 
 ## Limits
 Cancellation depends on the server and every proxy between client and server, so test through each layer you run.
