@@ -1,0 +1,9 @@
+{
+  "author": "Sandeep Belgavi",
+  "synthetic": true,
+  "retrieval": [
+    {"score": 0.9, "supported": true},
+    {"score": 0.85, "supported": false},
+    {"score": 0.2, "supported": false}
+  ]
+}
