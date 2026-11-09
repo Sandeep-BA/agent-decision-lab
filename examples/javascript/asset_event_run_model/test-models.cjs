@@ -1,0 +1,25 @@
+/* Author: Sandeep Belgavi. Independent expected-outcome checks for synthetic models. */
+const assert=require('node:assert/strict');
+const m=require('./daily-evidence-model.js');
+let checks=0;const test=(name,fn)=>{fn();checks++;console.log('PASS '+name);};
+test('exact tail, five losses and zero wins',()=>assert.equal(m.binomialTail(5,5),1/32));
+test('exact tail, 15 of 20',()=>assert.ok(Math.abs(m.binomialTail(15,20)-21700/1048576)<1e-12));
+test('no disagreements',()=>assert.equal(m.binomialTail(0,0),1));
+test('all wins',()=>assert.equal(m.binomialTail(0,20),1));
+test('reject impossible counts',()=>assert.throws(()=>m.binomialTail(6,5),RangeError));
+const base={n:1000,q:.1,d:.03,alpha:.05};
+test('paired fixture accounting',()=>{const r=m.evalgate(base);assert.deepEqual([r.losses,r.wins,r.agreement],[65,35,900]);assert.ok(r.detected);});
+test('planning estimate at three points',()=>{const r=m.evalgate(base);assert.ok(r.required>=686&&r.required<=688);});
+test('larger sample improves approximate power',()=>assert.ok(m.evalgate({...base,n:2000}).power>m.evalgate(base).power));
+test('more discordance requires more cases',()=>assert.ok(m.evalgate({...base,q:.3}).required>m.evalgate(base).required));
+test('zero target effect has no finite target',()=>assert.equal(m.evalgate({...base,d:0}).required,null));
+test('reject impossible paired probabilities',()=>assert.throws(()=>m.evalgate({...base,q:.01,d:.1}),RangeError));
+const events={count:6,spacing:0,period:1,duration:4,slots:2,mode:'per-event'};
+test('burst per-event admission waves',()=>{const r=m.assetevents(events);assert.equal(r.runs.length,6);assert.equal(r.finish,12);assert.equal(r.maxWait,8);});
+test('burst batched once',()=>{const r=m.assetevents({...events,mode:'batch'});assert.equal(r.runs.length,1);assert.equal(r.finish,4);assert.equal(r.covered,6);});
+test('one event policies agree',()=>assert.equal(m.assetevents({...events,count:1}).finish,m.assetevents({...events,count:1,mode:'batch'}).finish));
+test('group at scheduler boundaries',()=>{const r=m.assetevents({...events,count:8,spacing:1,period:3,mode:'batch'});assert.deepEqual(r.runs.map(x=>x.events),[['E1'],['E2','E3','E4'],['E5','E6','E7'],['E8']]);});
+test('coverage and no duplicates for all small fixtures',()=>{for(let n=1;n<=20;n++)for(const mode of ['batch','per-event']){const r=m.assetevents({...events,count:n,spacing:1,period:3,mode});const ids=r.runs.flatMap(x=>x.events);assert.equal(ids.length,n);assert.equal(new Set(ids).size,n);}});
+test('additional slots cannot delay completion',()=>assert.ok(m.assetevents({...events,slots:4}).finish<=m.assetevents(events).finish));
+test('invalid scheduler period rejected',()=>assert.throws(()=>m.assetevents({...events,period:0}),RangeError));
+console.log(JSON.stringify({passed:checks,failed:0}));
