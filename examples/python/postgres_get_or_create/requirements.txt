@@ -1,0 +1,2 @@
+# Author: Sandeep Belgavi. Needed only for the PostgreSQL tests.
+psycopg[binary]==3.2.9
