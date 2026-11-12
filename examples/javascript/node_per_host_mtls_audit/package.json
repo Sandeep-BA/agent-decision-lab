@@ -1,0 +1,9 @@
+{
+  "name": "node-per-host-mtls-audit",
+  "private": true,
+  "type": "module",
+  "author": "Sandeep Belgavi",
+  "description": "Offline triage for the Node.js 11 November 2026 TLS fixes",
+  "engines": {"node": ">=22"},
+  "scripts": {"test": "node --test"}
+}
