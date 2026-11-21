@@ -41,5 +41,15 @@ class DnsNameTest(unittest.TestCase):
         self.assertNotIn('inside the header', ctx.exception.args[0])
 
 
+    def test_backward_pointer_can_still_loop_through_a_label(self):
+        # 12: label "a"; 14: pointer back to 12. Every pointer points backward, yet decoding from 14 cycles.
+        from dns_names import HEADER
+        pkt = HEADER + bytes([1, 0x61, 0xc0, 0x0c])
+        with self.assertRaisesRegex(NameError_, 'more than 16 pointers'):
+            decode_name(pkt, 14)
+        with self.assertRaisesRegex(NameError_, 'over 255'):
+            decode_name(pkt, 14, max_hops=0)
+
+
 if __name__ == '__main__':
     unittest.main()

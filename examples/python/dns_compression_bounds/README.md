@@ -24,7 +24,7 @@ python -m unittest -v
 
 ## Expected output
 
-`valid`: help.books.example.com., next offset 42, 1 pointer, 24 octets. Strict mode refuses the self-loop, two-pointer loop and forward pointer as "not before it", the header pointer, the 0x41 octet, a 257-octet name and a truncated label. With forward pointers allowed and 8 hops the loops stop at "more than 8 pointers"; with no bounds they would loop forever. 6 tests pass.
+`valid`: help.books.example.com., next offset 42, 1 pointer, 24 octets. Strict mode refuses the self-loop, two-pointer loop and forward pointer as "not before it", the header pointer, the 0x41 octet, a 257-octet name and a truncated label. With forward pointers allowed and 8 hops the loops stop at "more than 8 pointers"; with no bounds they would loop forever. A backward pointer that loops through a label (12: label `a`, 14: pointer to 12) passes the backward rule and is stopped by the hop limit, or by the 255-octet limit when hops are unlimited. 7 tests pass.
 
 ## Limitations
 
