@@ -1,0 +1,12 @@
+{
+  "prefix": "ABCD",
+  "saved_tag": "\"v1\"",
+  "status": 206,
+  "body": "EFGH",
+  "response_tag": "\"v1\"",
+  "range": [
+    4,
+    7,
+    8
+  ]
+}

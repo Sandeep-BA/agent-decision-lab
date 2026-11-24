@@ -1,0 +1,158 @@
+{
+  "kind": "rollout",
+  "inputs": {
+    "workers": 4,
+    "old": 2,
+    "sessions": 3,
+    "turns": 12,
+    "strategy": "mixed",
+    "route": false
+  },
+  "metrics": {
+    "completed": 9,
+    "rejected": 3,
+    "rerouted": 0,
+    "newCheckpoints": 3
+  },
+  "rows": [
+    {
+      "turn": 1,
+      "session": "S1",
+      "requested": "W1",
+      "selected": "W1",
+      "reader": "old",
+      "incoming": "1.22",
+      "outgoing": "1.22",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 2,
+      "session": "S2",
+      "requested": "W2",
+      "selected": "W2",
+      "reader": "old",
+      "incoming": "1.22",
+      "outgoing": "1.22",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 3,
+      "session": "S3",
+      "requested": "W3",
+      "selected": "W3",
+      "reader": "new",
+      "incoming": "1.22",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 4,
+      "session": "S1",
+      "requested": "W4",
+      "selected": "W4",
+      "reader": "new",
+      "incoming": "1.22",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 5,
+      "session": "S2",
+      "requested": "W1",
+      "selected": "W1",
+      "reader": "old",
+      "incoming": "1.22",
+      "outgoing": "1.22",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 6,
+      "session": "S3",
+      "requested": "W2",
+      "selected": "W2",
+      "reader": "old",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "unsupported format; no write"
+    },
+    {
+      "turn": 7,
+      "session": "S1",
+      "requested": "W3",
+      "selected": "W3",
+      "reader": "new",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 8,
+      "session": "S2",
+      "requested": "W4",
+      "selected": "W4",
+      "reader": "new",
+      "incoming": "1.22",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 9,
+      "session": "S3",
+      "requested": "W1",
+      "selected": "W1",
+      "reader": "old",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "unsupported format; no write"
+    },
+    {
+      "turn": 10,
+      "session": "S1",
+      "requested": "W2",
+      "selected": "W2",
+      "reader": "old",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "unsupported format; no write"
+    },
+    {
+      "turn": 11,
+      "session": "S2",
+      "requested": "W3",
+      "selected": "W3",
+      "reader": "new",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    },
+    {
+      "turn": 12,
+      "session": "S3",
+      "requested": "W4",
+      "selected": "W4",
+      "reader": "new",
+      "incoming": "1.24",
+      "outgoing": "1.24",
+      "outcome": "read and wrote checkpoint"
+    }
+  ],
+  "trace": [
+    "Turn 1, S1: W1 requested; selected W1 (old). Read format 1.22: read and wrote checkpoint; stored format 1.22.",
+    "Turn 2, S2: W2 requested; selected W2 (old). Read format 1.22: read and wrote checkpoint; stored format 1.22.",
+    "Turn 3, S3: W3 requested; selected W3 (new). Read format 1.22: read and wrote checkpoint; stored format 1.24.",
+    "Turn 4, S1: W4 requested; selected W4 (new). Read format 1.22: read and wrote checkpoint; stored format 1.24.",
+    "Turn 5, S2: W1 requested; selected W1 (old). Read format 1.22: read and wrote checkpoint; stored format 1.22.",
+    "Turn 6, S3: W2 requested; selected W2 (old). Read format 1.24: unsupported format; no write; stored format 1.24.",
+    "Turn 7, S1: W3 requested; selected W3 (new). Read format 1.24: read and wrote checkpoint; stored format 1.24.",
+    "Turn 8, S2: W4 requested; selected W4 (new). Read format 1.22: read and wrote checkpoint; stored format 1.24.",
+    "Turn 9, S3: W1 requested; selected W1 (old). Read format 1.24: unsupported format; no write; stored format 1.24.",
+    "Turn 10, S1: W2 requested; selected W2 (old). Read format 1.24: unsupported format; no write; stored format 1.24.",
+    "Turn 11, S2: W3 requested; selected W3 (new). Read format 1.24: read and wrote checkpoint; stored format 1.24.",
+    "Turn 12, S3: W4 requested; selected W4 (new). Read format 1.24: read and wrote checkpoint; stored format 1.24."
+  ],
+  "limits": [
+    "Compatibility model only; no actual SDK checkpoint is serialized.",
+    "Readers-first means all eligible workers upgraded before processing; alpha.2 has no assumed old-format write toggle.",
+    "No storage races, approvals, native-process recovery or external effects are modeled."
+  ]
+}

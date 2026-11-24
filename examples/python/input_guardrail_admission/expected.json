@@ -1,0 +1,81 @@
+{
+  "guarded": {
+    "admitted": [
+      [
+        "A",
+        0
+      ]
+    ],
+    "effects": [
+      "A"
+    ],
+    "queued": [
+      "B",
+      "C"
+    ],
+    "trace": [
+      [
+        0,
+        "start A"
+      ],
+      [
+        2,
+        "effect A"
+      ],
+      [
+        3,
+        "end A"
+      ]
+    ]
+  },
+  "unchecked": {
+    "admitted": [
+      [
+        "A",
+        0
+      ],
+      [
+        "B",
+        3
+      ],
+      [
+        "C",
+        4
+      ]
+    ],
+    "effects": [
+      "A"
+    ],
+    "queued": [],
+    "trace": [
+      [
+        0,
+        "start A"
+      ],
+      [
+        2,
+        "effect A"
+      ],
+      [
+        3,
+        "end A"
+      ],
+      [
+        3,
+        "start B"
+      ],
+      [
+        4,
+        "end B"
+      ],
+      [
+        4,
+        "start C"
+      ],
+      [
+        5,
+        "end C"
+      ]
+    ]
+  }
+}

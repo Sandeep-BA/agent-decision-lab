@@ -1,0 +1,2 @@
+# Author: Sandeep Belgavi. Optional Python runner; psql needs no Python packages.
+psycopg[binary]==3.2.10

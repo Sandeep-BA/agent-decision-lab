@@ -1,0 +1,7 @@
+{
+  "before_outer_rollback": [
+    11,
+    12
+  ],
+  "durable_rows": 0
+}

@@ -1,0 +1,2 @@
+# Author: Sandeep Belgavi. No third-party packages; Python 3.13 standard library only.
+# zoneinfo needs IANA time zone data: the system database, or the tzdata package where none exists (for example Windows).

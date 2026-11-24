@@ -1,0 +1,6 @@
+{
+  "allowed": false,
+  "reasons": [
+    "shared write access: tools"
+  ]
+}

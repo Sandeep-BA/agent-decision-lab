@@ -1,0 +1,13 @@
+{
+  "ancestors": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "attempts_for_M2": [
+    "try1",
+    "try2"
+  ],
+  "logical_messages": 4
+}

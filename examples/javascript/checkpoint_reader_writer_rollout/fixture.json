@@ -1,0 +1,8 @@
+{
+  "workers": 4,
+  "old": 2,
+  "sessions": 3,
+  "turns": 12,
+  "strategy": "mixed",
+  "route": false
+}
