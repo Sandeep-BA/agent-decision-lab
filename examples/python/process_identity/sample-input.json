@@ -1,0 +1,13 @@
+{
+  "owned": {
+    "pid": 42,
+    "incarnation": "birth-a",
+    "owner_generation": "supervisor-7"
+  },
+  "observed": {
+    "pid": 42,
+    "incarnation": "birth-b",
+    "owner_generation": "unrelated"
+  },
+  "generation": "supervisor-7"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "checkpoint_reader_writer_rollout",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Sandeep Belgavi",
+  "scripts": {
+    "test": "node test.cjs",
+    "start": "node example.cjs"
+  }
+}

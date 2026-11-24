@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "body_fails": true,
+  "close_order": [
+    "output",
+    "input"
+  ]
+}

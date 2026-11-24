@@ -1,0 +1,8 @@
+{
+  "required": {
+    "route": "synthetic-a",
+    "revision": 3,
+    "endpoint": "https://gateway.invalid/model/"
+  },
+  "current": null
+}

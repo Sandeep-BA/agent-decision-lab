@@ -1,0 +1,10 @@
+{
+  "name": "judge_position_bias",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Sandeep Belgavi",
+  "scripts": {
+    "test": "node test.cjs",
+    "start": "node example.cjs"
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "kind": "judge",
+  "inputs": {
+    "pairs": 60,
+    "bias": 1,
+    "gap": 0,
+    "share": 0.5,
+    "seed": 7
+  },
+  "metrics": {
+    "pairs": 60,
+    "calls": 120,
+    "singleA": 42,
+    "consistentA": 12,
+    "consistentB": 11,
+    "firstBoth": 30,
+    "secondBoth": 7,
+    "flips": 37,
+    "signP": 1
+  },
+  "rows": [
+    {
+      "pair": 1,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 2,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 3,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 4,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 5,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 6,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 7,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 8,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 9,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 10,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 11,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 12,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 13,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 14,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 15,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 16,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 17,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 18,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 19,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 20,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 21,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 22,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 23,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 24,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 25,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 26,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 27,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 28,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 29,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 30,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 31,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 32,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 33,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 34,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 35,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 36,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 37,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 38,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 39,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 40,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 41,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 42,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 43,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 44,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 45,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 46,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 47,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 48,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 49,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 50,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 51,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 52,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "B",
+      "outcome": "consistent B"
+    },
+    {
+      "pair": 53,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 54,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 55,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "B",
+      "pickBA": "A",
+      "outcome": "second in both"
+    },
+    {
+      "pair": 56,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 57,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 58,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    },
+    {
+      "pair": 59,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "B",
+      "outcome": "first in both"
+    },
+    {
+      "pair": 60,
+      "qualityDifference": 0,
+      "pFirstAB": 0.7310585786300049,
+      "pFirstBA": 0.7310585786300049,
+      "pickAB": "A",
+      "pickBA": "A",
+      "outcome": "consistent A"
+    }
+  ],
+  "trace": [
+    "Pair 1: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 2: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 3: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 4: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 5: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 6: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 7: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 8: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 9: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 10: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 11: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 12: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 13: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 14: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 15: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 16: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 17: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 18: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 19: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 20: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 21: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 22: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 23: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 24: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 25: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 26: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 27: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 28: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 29: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 30: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 31: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 32: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 33: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 34: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 35: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 36: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 37: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 38: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 39: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 40: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 41: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 42: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 43: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 44: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 45: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 46: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 47: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 48: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 49: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 50: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 51: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 52: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, B: consistent B.",
+    "Pair 53: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 54: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 55: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks B, A: second in both.",
+    "Pair 56: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 57: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 58: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A.",
+    "Pair 59: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, B: first in both.",
+    "Pair 60: assumed A-minus-B quality 0; P(first | A,B)=0.731, P(first | B,A)=0.731. Normalized picks A, A: consistent A."
+  ],
+  "limits": [
+    "Synthetic independent draws; not model accuracy or a provider benchmark.",
+    "The sign test is conditional on consistent winners; flips are excluded and reported.",
+    "No explicit judge ties, refusals or malformed outputs are simulated."
+  ]
+}

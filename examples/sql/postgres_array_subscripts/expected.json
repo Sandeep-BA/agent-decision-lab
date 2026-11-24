@@ -1,0 +1,1 @@
+{"server_version": "18.4", "results": [[[0, 10], [1, null], [2, 30]], [["PASS: array shape, subscript mapping, ordinal mismatch, empty/null, equality, negative bounds, shape constraints"]]]}

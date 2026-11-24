@@ -1,0 +1,17 @@
+[
+  {
+    "name": "root",
+    "owner": "administrator",
+    "mode": 493
+  },
+  {
+    "name": "tools",
+    "owner": "administrator",
+    "mode": 511
+  },
+  {
+    "name": "server",
+    "owner": "administrator",
+    "mode": 493
+  }
+]

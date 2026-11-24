@@ -1,0 +1,7 @@
+{
+  "commands": [
+    "open_review"
+  ],
+  "late_reply": "stale_revision",
+  "phase": "awaiting_review"
+}

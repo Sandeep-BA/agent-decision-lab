@@ -1,0 +1,21 @@
+[
+  {
+    "id": "read",
+    "op": "read_fixture",
+    "after": []
+  },
+  {
+    "id": "digest",
+    "op": "checksum",
+    "after": [
+      "read"
+    ]
+  },
+  {
+    "id": "verify",
+    "op": "compare",
+    "after": [
+      "digest"
+    ]
+  }
+]
