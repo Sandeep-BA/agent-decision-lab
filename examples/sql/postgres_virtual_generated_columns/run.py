@@ -43,6 +43,17 @@ STEPS = [
     ("CREATE TABLE tax_stored (a int, b int GENERATED ALWAYS AS (add_tax(a)) STORED)", "ok"),
     ("DROP TABLE IF EXISTS tax_stored", "ok"),
     ("DROP FUNCTION add_tax(int)", "ok"),
+    # On-disk size: twin tables differing only in VIRTUAL vs STORED (needs pageinspect, superuser).
+    ("CREATE EXTENSION IF NOT EXISTS pageinspect", "ok"),
+    ("DROP TABLE IF EXISTS v_lines, s_lines", "ok"),
+    ("CREATE TABLE v_lines (id bigint, quantity int, unit_price_cents int, title text, line_total_cents int GENERATED ALWAYS AS (quantity * unit_price_cents) VIRTUAL)", "ok"),
+    ("CREATE TABLE s_lines (id bigint, quantity int, unit_price_cents int, title text, line_total_cents int GENERATED ALWAYS AS (quantity * unit_price_cents) STORED)", "ok"),
+    ("INSERT INTO v_lines (id, quantity, unit_price_cents, title) VALUES (1, 2, 1250, 'Distributed Systems Notes'), (2, 1, 3999, 'Kafka Field Guide')", "ok"),
+    ("INSERT INTO s_lines (id, quantity, unit_price_cents, title) VALUES (1, 2, 1250, 'Distributed Systems Notes'), (2, 1, 3999, 'Kafka Field Guide')", "ok"),
+    ("SELECT lp, lp_len FROM heap_page_items(get_raw_page('v_lines', 0)) ORDER BY lp", "ok"),
+    ("SELECT lp, lp_len FROM heap_page_items(get_raw_page('s_lines', 0)) ORDER BY lp", "ok"),
+    ("SELECT (t.*).line_total_cents, pg_column_size(t.*) FROM v_lines t ORDER BY id", "ok"),
+    ("DROP TABLE v_lines, s_lines", "ok"),
 ]
 
 results, failed = [], 0
