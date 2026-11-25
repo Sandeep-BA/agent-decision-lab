@@ -1,0 +1,28 @@
+{
+  "weak": {
+    "mutants": 26,
+    "killed": 13,
+    "survived": 13,
+    "survivors": [
+      "line 5: if-branch never taken",
+      "line 7: if-branch never taken",
+      "line 7: Or -> And",
+      "line 7: drop operand 1 of Or",
+      "line 7: drop operand 2 of Or",
+      "line 9: drop operand 1 of Or",
+      "line 7: LtE -> Lt",
+      "line 7: Gt -> GtE",
+      "line 9: Gt -> GtE",
+      "line 7: constant 0 -> 1",
+      "line 7: constant 0 -> -1",
+      "line 9: constant 5000 -> 5001",
+      "line 9: constant 5000 -> 4999"
+    ]
+  },
+  "strong": {
+    "mutants": 26,
+    "killed": 26,
+    "survived": 0,
+    "survivors": []
+  }
+}

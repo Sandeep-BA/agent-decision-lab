@@ -1,0 +1,24 @@
+{
+  "first_page": {
+    "truncated": true,
+    "returned": 11,
+    "total": 40,
+    "offset": 0,
+    "next_offset": 11
+  },
+  "second_page": {
+    "truncated": true,
+    "returned": 11,
+    "total": 40,
+    "offset": 11,
+    "next_offset": 22
+  },
+  "pages_to_read_all": 4,
+  "naive_slice_is_valid_json": false,
+  "text": {
+    "truncated": true,
+    "returned_bytes": 18,
+    "total_bytes": 30,
+    "next_byte_offset": 18
+  }
+}

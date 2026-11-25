@@ -1,0 +1,46 @@
+{
+  "legacy_native": {
+    "effective_strategy": "web-server",
+    "findings": [
+      {
+        "level": "deprecated",
+        "detail": "replace server.forward-headers-strategy=native with server.request.header.forwarded.strategy=web-server"
+      }
+    ]
+  },
+  "both_set": {
+    "effective_strategy": null,
+    "findings": [
+      {
+        "level": "startup-failure",
+        "detail": "server.forward-headers-strategy and server.request.header.forwarded.strategy are mutually exclusive"
+      }
+    ]
+  },
+  "rfc_with_prefix": {
+    "effective_strategy": "web-server",
+    "findings": [
+      {
+        "level": "startup-failure",
+        "detail": "use-prefix can only be used with x-forwarded naming"
+      }
+    ]
+  },
+  "unset_local": {
+    "effective_strategy": "none",
+    "findings": [
+      {
+        "level": "implicit",
+        "detail": "no strategy set; default is none (no cloud platform)"
+      },
+      {
+        "level": "check",
+        "detail": "behind a TLS-terminating proxy, request URLs will use the internal scheme and host"
+      }
+    ]
+  },
+  "migrated": {
+    "effective_strategy": "web-server",
+    "findings": []
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "final_state": "refunded",
+  "revision": 2,
+  "trace": [
+    {
+      "turn": 1,
+      "state": "awaiting_verification",
+      "visible": [
+        "lookup_order",
+        "mark_verified",
+        "request_receipt_photo"
+      ]
+    },
+    {
+      "turn": 1,
+      "call": "issue_refund",
+      "result": "rejected_not_allowed_in_state"
+    },
+    {
+      "turn": 1,
+      "call": "mark_verified",
+      "result": "applied"
+    },
+    {
+      "turn": 2,
+      "state": "verified",
+      "visible": [
+        "issue_refund",
+        "lookup_order"
+      ]
+    },
+    {
+      "turn": 2,
+      "call": "issue_refund (other worker)",
+      "result": "applied"
+    },
+    {
+      "turn": 2,
+      "call": "issue_refund (this worker, stale)",
+      "result": "rejected_not_allowed_in_state"
+    },
+    {
+      "turn": 3,
+      "state": "refunded",
+      "visible": [
+        "close_case",
+        "lookup_order"
+      ]
+    }
+  ]
+}

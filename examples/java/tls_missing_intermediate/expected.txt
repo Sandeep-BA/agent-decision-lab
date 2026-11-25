@@ -1,0 +1,12 @@
+case=leaf-only
+served_chain_length=1 result=PKIX_PATH_BUILDING_FAILED
+case=full-chain
+served_chain_length=2 result=OK status=200
+case=leaf-only, no AIA extension, property on
+served_chain_length=1 result=PKIX_PATH_BUILDING_FAILED
+case=leaf-only with AIA URL, property off
+served_chain_length=1 result=PKIX_PATH_BUILDING_FAILED
+case=leaf-only with AIA URL, property on
+served_chain_length=1 result=OK status=200
+case=leaf-only with AIA URL, property on, URL unreachable
+served_chain_length=1 result=PKIX_PATH_BUILDING_FAILED

@@ -1,0 +1,35 @@
+{
+  "documented_examples": {
+    "sexpire_no_key": [
+      -2,
+      -2
+    ],
+    "sexpire_10": [
+      1,
+      1,
+      -2
+    ],
+    "sexpire_20_nx": [
+      0
+    ],
+    "sexpire_20_gt": [
+      1
+    ],
+    "sttl": [
+      20,
+      10
+    ]
+  },
+  "surprises": {
+    "ttl_after_sadd": 900,
+    "ttl_after_plain_saddex": -1,
+    "gt_on_persistent": [
+      0
+    ],
+    "lt_on_persistent": [
+      1
+    ],
+    "member_after_61s": 0,
+    "key_exists_after_61s": false
+  }
+}
