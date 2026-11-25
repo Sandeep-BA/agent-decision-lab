@@ -187,6 +187,93 @@
    "expected": "ok",
    "outcome": "ok",
    "rows": null
+  },
+  {
+   "sql": "CREATE EXTENSION IF NOT EXISTS pageinspect",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "DROP TABLE IF EXISTS v_lines, s_lines",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE TABLE v_lines (id bigint, quantity int, unit_price_cents int, title text, line_total_cents int GENERATED ALWAYS A",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE TABLE s_lines (id bigint, quantity int, unit_price_cents int, title text, line_total_cents int GENERATED ALWAYS A",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "INSERT INTO v_lines (id, quantity, unit_price_cents, title) VALUES (1, 2, 1250, 'Distributed Systems Notes'), (2, 1, 399",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "INSERT INTO s_lines (id, quantity, unit_price_cents, title) VALUES (1, 2, 1250, 'Distributed Systems Notes'), (2, 1, 399",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "SELECT lp, lp_len FROM heap_page_items(get_raw_page('v_lines', 0)) ORDER BY lp",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     1,
+     66
+    ],
+    [
+     2,
+     58
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT lp, lp_len FROM heap_page_items(get_raw_page('s_lines', 0)) ORDER BY lp",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     1,
+     72
+    ],
+    [
+     2,
+     64
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT (t.*).line_total_cents, pg_column_size(t.*) FROM v_lines t ORDER BY id",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     2500,
+     72
+    ],
+    [
+     3999,
+     64
+    ]
+   ]
+  },
+  {
+   "sql": "DROP TABLE v_lines, s_lines",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
   }
  ]
 }
