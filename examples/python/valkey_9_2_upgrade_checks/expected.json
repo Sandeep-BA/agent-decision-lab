@@ -1,0 +1,28 @@
+{
+  "zcount_bare_paren": {
+    "9.0": 3,
+    "9.2": "error: min or max is not a float"
+  },
+  "audit": [
+    {
+      "bound": "(",
+      "before_9_2": [
+        0.0,
+        true
+      ],
+      "from_9_2": "error: min or max is not a float"
+    },
+    {
+      "bound": "",
+      "before_9_2": [
+        0.0,
+        false
+      ],
+      "from_9_2": "error: min or max is not a float"
+    }
+  ],
+  "first_save_s_read_only_cache_50_expiries_per_s": {
+    "before_9_2_primary": null,
+    "from_9_2_primary": 200
+  }
+}

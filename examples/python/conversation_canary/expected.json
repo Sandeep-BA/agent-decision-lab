@@ -1,0 +1,56 @@
+{
+  "per_request_random": {
+    "policy": "request",
+    "conversations": 400,
+    "turns": 6,
+    "mixed_conversations": 338,
+    "treatment_to_control_switches": 198,
+    "treatment_at_first_turn": 20,
+    "treatment_at_last_turn": 200
+  },
+  "hash_recomputed_each_turn": {
+    "policy": "hash",
+    "conversations": 400,
+    "turns": 6,
+    "mixed_conversations": 179,
+    "treatment_to_control_switches": 0,
+    "treatment_at_first_turn": 25,
+    "treatment_at_last_turn": 204
+  },
+  "hash_pinned_at_first_turn": {
+    "policy": "pinned",
+    "conversations": 400,
+    "turns": 6,
+    "mixed_conversations": 0,
+    "treatment_to_control_switches": 0,
+    "treatment_at_first_turn": 25,
+    "treatment_at_last_turn": 25
+  },
+  "hash_recomputed_with_salt_change": {
+    "policy": "hash",
+    "conversations": 400,
+    "turns": 6,
+    "mixed_conversations": 124,
+    "treatment_to_control_switches": 66,
+    "treatment_at_first_turn": 83,
+    "treatment_at_last_turn": 75
+  },
+  "new_conversation_share_at_2000bp": 0.1983,
+  "example_assignments": {
+    "CASE-4001": [
+      "control",
+      "control",
+      "control"
+    ],
+    "CASE-4002": [
+      "control",
+      "control",
+      "control"
+    ],
+    "CASE-4003": [
+      "control",
+      "control",
+      "treatment"
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+{
+ "server_version": "18.4",
+ "failed": 0,
+ "steps": [
+  {
+   "sql": "DROP TABLE IF EXISTS book_order_lines",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE TABLE book_order_lines ( id bigint PRIMARY KEY, quantity int NOT NULL, unit_price_cents int NOT NULL, title text ",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "SELECT attname, attgenerated FROM pg_attribute WHERE attrelid = 'book_order_lines'::regclass AND attgenerated <> '' ORDE",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     "line_total_cents",
+     "v"
+    ],
+    [
+     "title_key",
+     "s"
+    ]
+   ]
+  },
+  {
+   "sql": "INSERT INTO book_order_lines (id, quantity, unit_price_cents, title) VALUES (1, 2, 1250, 'Distributed Systems Notes'), (",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "SELECT id, line_total_cents, title_key FROM book_order_lines ORDER BY id",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     1,
+     2500,
+     "distributed systems notes"
+    ],
+    [
+     2,
+     3999,
+     "kafka field guide"
+    ]
+   ]
+  },
+  {
+   "sql": "INSERT INTO book_order_lines (id, quantity, unit_price_cents, title, line_total_cents) VALUES (3, 1, 100, 'x', 100)",
+   "expected": "GeneratedAlways",
+   "outcome": "GeneratedAlways",
+   "rows": "cannot insert a non-DEFAULT value into column \"line_total_cents\""
+  },
+  {
+   "sql": "CREATE INDEX ON book_order_lines (line_total_cents)",
+   "expected": "FeatureNotSupported",
+   "outcome": "FeatureNotSupported",
+   "rows": "indexes on virtual generated columns are not supported"
+  },
+  {
+   "sql": "CREATE INDEX line_total_expr ON book_order_lines ((quantity * unit_price_cents))",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE UNIQUE INDEX title_key_unique ON book_order_lines (title_key)",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "SET enable_seqscan = off",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "EXPLAIN (COSTS OFF) SELECT id FROM book_order_lines WHERE line_total_cents > 3000",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     "Index Scan using line_total_expr on book_order_lines"
+    ],
+    [
+     "  Index Cond: ((quantity * unit_price_cents) > 3000)"
+    ]
+   ]
+  },
+  {
+   "sql": "RESET enable_seqscan",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE STATISTICS lt_stats ON line_total_cents FROM book_order_lines",
+   "expected": "FeatureNotSupported",
+   "outcome": "FeatureNotSupported",
+   "rows": "statistics creation on virtual generated columns is not supported"
+  },
+  {
+   "sql": "CREATE STATISTICS lt_expr_stats ON (quantity * unit_price_cents) FROM book_order_lines",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "ALTER TABLE book_order_lines ADD CONSTRAINT positive_total CHECK (line_total_cents > 0)",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "INSERT INTO book_order_lines (id, quantity, unit_price_cents, title) VALUES (4, 0, 500, 'Zero Copy')",
+   "expected": "CheckViolation",
+   "outcome": "CheckViolation",
+   "rows": "new row for relation \"book_order_lines\" violates check constraint \"positive_total\""
+  },
+  {
+   "sql": "ALTER TABLE book_order_lines ALTER COLUMN line_total_cents SET EXPRESSION AS (quantity * unit_price_cents)",
+   "expected": "FeatureNotSupported",
+   "outcome": "FeatureNotSupported",
+   "rows": "ALTER TABLE / SET EXPRESSION is not supported for virtual generated columns in tables with check constraints"
+  },
+  {
+   "sql": "ALTER TABLE book_order_lines ALTER COLUMN line_total_cents DROP EXPRESSION",
+   "expected": "FeatureNotSupported",
+   "outcome": "FeatureNotSupported",
+   "rows": "ALTER TABLE / DROP EXPRESSION is not supported for virtual generated columns"
+  },
+  {
+   "sql": "ALTER TABLE book_order_lines ALTER COLUMN title_key SET EXPRESSION AS (upper(title))",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "SELECT id, title_key FROM book_order_lines ORDER BY id",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": [
+    [
+     1,
+     "DISTRIBUTED SYSTEMS NOTES"
+    ],
+    [
+     2,
+     "KAFKA FIELD GUIDE"
+    ]
+   ]
+  },
+  {
+   "sql": "CREATE OR REPLACE FUNCTION add_tax(int) RETURNS int IMMUTABLE LANGUAGE sql AS 'SELECT $1 * 118 / 100'",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "CREATE TABLE tax_virtual (a int, b int GENERATED ALWAYS AS (add_tax(a)) VIRTUAL)",
+   "expected": "FeatureNotSupported",
+   "outcome": "FeatureNotSupported",
+   "rows": "generation expression uses user-defined function"
+  },
+  {
+   "sql": "CREATE TABLE tax_stored (a int, b int GENERATED ALWAYS AS (add_tax(a)) STORED)",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "DROP TABLE IF EXISTS tax_stored",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  },
+  {
+   "sql": "DROP FUNCTION add_tax(int)",
+   "expected": "ok",
+   "outcome": "ok",
+   "rows": null
+  }
+ ]
+}

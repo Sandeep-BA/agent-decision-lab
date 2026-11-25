@@ -63,6 +63,14 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`http_framing_toy`](http_framing_toy/) | Two lenient HTTP/1.1 framers that desynchronise on a CL.TE probe, and a strict RFC 9112 framer | `python -m unittest discover -s examples/python/http_framing_toy -p "test_*.py"` |
 | [`bounded_json_format`](bounded_json_format/) | JSON indentation growth by nesting depth, and formatting only within size and depth limits | `python -m unittest discover -s examples/python/bounded_json_format -p "test_*.py"` |
 | [`genai_v1_upgrade_check`](genai_v1_upgrade_check/) | google-genai 3.0.0 defaults pinned offline: v1, httpx2 and request paths (needs `pip install -r requirements.txt`) | `python -m unittest discover -s examples/python/genai_v1_upgrade_check -p "test_*.py"` |
+| [`state_scoped_tools`](state_scoped_tools/) | Tools scoped by workflow state: allowlist per state, re-check at execution, stale-listing rejection | `python -m unittest discover -s examples/python/state_scoped_tools -p "test_*.py"` |
+| [`guard_mutation_testing`](guard_mutation_testing/) | Mutation testing an agent guard with the ast module: weak versus strong suites and their survivors | `python -m unittest discover -s examples/python/guard_mutation_testing -p "test_*.py"` |
+| [`conversation_canary`](conversation_canary/) | Per-conversation canaries: FNV-1a buckets, monotone ramps and pinning versus recomputing | `python -m unittest discover -s examples/python/conversation_canary -p "test_*.py"` |
+| [`tool_result_truncation`](tool_result_truncation/) | Structural truncation of tool results with a record of returned, total and next offset | `python -m unittest discover -s examples/python/tool_result_truncation -p "test_*.py"` |
+| [`topology_spread_skew`](topology_spread_skew/) | Kubernetes topology spread: skew, minDomains and nodeTaintsPolicy after a zone outage (a model of the documented rules) | `python -m unittest discover -s examples/python/topology_spread_skew -p "test_*.py"` |
+| [`valkey_9_2_upgrade_checks`](valkey_9_2_upgrade_checks/) | Valkey 9.2 behaviour changes as models: bare score bounds and save points counting active expiry | `python -m unittest discover -s examples/python/valkey_9_2_upgrade_checks -p "test_*.py"` |
+| [`set_member_ttl_model`](set_member_ttl_model/) | Redis 8.12 set-member expiration replies, reproducing every redis.io example (a model, not a server) | `python -m unittest discover -s examples/python/set_member_ttl_model -p "test_*.py"` |
+| [`spring_forwarded_header_migration`](spring_forwarded_header_migration/) | Spring Boot 4.2 forwarded-header properties: mapping, mutual exclusion and prefix rules from v4.2.0 sources | `python -m unittest discover -s examples/python/spring_forwarded_header_migration -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
@@ -70,3 +78,7 @@ this directory; nothing here is built by Maven.
 A Java example, [`../java/bigdecimal_keys`](../java/bigdecimal_keys/), shows BigDecimal equality and scale with plain `javac` and `java` (JDK 17 or newer).
 
 A Go example, [`../go/llm_call_budget`](../go/llm_call_budget/), tests model-call budgets in ADK Go v2.7.0 with `go test` (Go 1.26.10 or newer).
+
+A Java example, [`../java/tls_missing_intermediate`](../java/tls_missing_intermediate/), serves a leaf-only and a full TLS chain from the JDK HTTPS server and measures six client cases with `sh run.sh` (JDK 17 or newer).
+
+A SQL example, [`../sql/postgres_virtual_generated_columns`](../sql/postgres_virtual_generated_columns/), checks 25 PostgreSQL 18 generated-column statements against stated outcomes with `python run.py` and a disposable database.
