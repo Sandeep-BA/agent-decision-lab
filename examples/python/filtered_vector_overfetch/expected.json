@@ -1,0 +1,54 @@
+{
+  "promo (10%, independent of topic)": {
+    "matching_rows": 2020,
+    "post_filter_returned": 4,
+    "overfetch_x4_returned": 10,
+    "overfetch_x4_recall": 1.0,
+    "overfetch_x10_returned": 10,
+    "overfetch_x10_recall": 1.0,
+    "overfetch_x40_returned": 10,
+    "overfetch_x40_recall": 1.0,
+    "iterative_visited": 120,
+    "iterative_returned": 10,
+    "prefilter_returned": 10
+  },
+  "rare (1%, independent of topic)": {
+    "matching_rows": 212,
+    "post_filter_returned": 1,
+    "overfetch_x4_returned": 4,
+    "overfetch_x4_recall": 0.4,
+    "overfetch_x10_returned": 7,
+    "overfetch_x10_recall": 0.7,
+    "overfetch_x40_returned": 10,
+    "overfetch_x40_recall": 1.0,
+    "iterative_visited": 560,
+    "iterative_returned": 10,
+    "prefilter_returned": 10
+  },
+  "topic 3 (5%, a different topic than the query)": {
+    "matching_rows": 1000,
+    "post_filter_returned": 0,
+    "overfetch_x4_returned": 0,
+    "overfetch_x4_recall": 0.0,
+    "overfetch_x10_returned": 0,
+    "overfetch_x10_recall": 0.0,
+    "overfetch_x40_returned": 10,
+    "overfetch_x40_recall": 1.0,
+    "iterative_visited": 1360,
+    "iterative_returned": 10,
+    "prefilter_returned": 10
+  },
+  "topic 10 (5%, the farthest topic from the query)": {
+    "matching_rows": 1000,
+    "post_filter_returned": 0,
+    "overfetch_x4_returned": 0,
+    "overfetch_x4_recall": 0.0,
+    "overfetch_x10_returned": 0,
+    "overfetch_x10_recall": 0.0,
+    "overfetch_x40_returned": 0,
+    "overfetch_x40_recall": 0.0,
+    "iterative_visited": 17840,
+    "iterative_returned": 10,
+    "prefilter_returned": 10
+  }
+}

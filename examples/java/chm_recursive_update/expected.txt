@@ -1,0 +1,15 @@
+java.version=23.0.2
+chm fib(20) threw java.lang.IllegalStateException: Recursive update
+chm size after failure=0
+hashmap fib(20) threw java.util.ConcurrentModificationException
+loop fib(90)=2880067194370816120
+get-then-put fib(90)=2880067194370816120 memo size=89
+other-map lookup=5
+different-bin nested=ok size=2
+same-key nested threw java.lang.IllegalStateException: Recursive update
+two-thread cross nesting=no progress after 3 s (deadlock)
+initialCapacity 16: 2=ok 3=ok 4=ok 5=ok 6=ok 7=ok 8=ok 9=ok 10=ok 11=ok 12=ok 13=ok 14=ok 15=ok 16=ok 17=ok 18=ok 19=ok 20=ok 21=ok 22=ok 23=ok 24=ok 25=ok 26=ISE 27=ISE 28=ISE 29=ISE 30=ISE 31=ISE 32=ISE 33=ISE 34=ISE 35=ISE 36=ISE 37=ISE 38=ISE 39=ISE 40=ISE
+initialCapacity 64: 2=ok 3=ok 4=ok 5=ok 6=ok 7=ok 8=ok 9=ok 10=ok 11=ok 12=ok 13=ok 14=ok 15=ok 16=ok 17=ok 18=ok 19=ok 20=ok 21=ok 22=ok 23=ok 24=ok 25=ok 26=ok 27=ok 28=ok 29=ok 30=ok 31=ok 32=ok 33=ok 34=ok 35=ok 36=ok 37=ok 38=ok 39=ok 40=ok
+default map, fib(20): Recursive update; top frames computeIfAbsent < fib < lambda$fib$0; computeIfAbsent frames 17; map size 0
+initialCapacity 16, fib(26): Recursive update; top frames transfer < addCount < computeIfAbsent; computeIfAbsent frames 2; map size 24
+initialCapacity 16, fib(25): ok

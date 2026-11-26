@@ -1,0 +1,5 @@
+python 3.13.5 platform win32 pid 27492
+after server close, client open: {'client CLOSE_WAIT': 5, 'server FIN_WAIT_2': 5}
+recv on first client returns b''
+after reading EOF but not closing: {'client CLOSE_WAIT': 5, 'server FIN_WAIT_2': 5}
+after client close(): {'server TIME_WAIT': 4}

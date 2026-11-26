@@ -1,0 +1,32 @@
+{
+  "defaults_when_absent": {
+    "readOnlyHint": false,
+    "destructiveHint": true,
+    "idempotentHint": false,
+    "openWorldHint": true
+  },
+  "naive": {
+    "bookstore-orders/lookup_order": "auto",
+    "bookstore-orders/issue_refund": "ask",
+    "bookstore-orders/list_returns": "ask",
+    "bookstore-orders/order_history": "ask",
+    "web-notes/search_notes": "auto",
+    "web-notes/delete_note": "auto"
+  },
+  "host_policy": {
+    "bookstore-orders/lookup_order": "auto",
+    "bookstore-orders/issue_refund": "ask",
+    "bookstore-orders/list_returns": "ask",
+    "bookstore-orders/order_history": "ask",
+    "web-notes/search_notes": "auto",
+    "web-notes/delete_note": "ask"
+  },
+  "host_policy_after_definition_change": {
+    "bookstore-orders/lookup_order": "auto",
+    "bookstore-orders/issue_refund": "ask",
+    "bookstore-orders/list_returns": "ask",
+    "bookstore-orders/order_history": "ask",
+    "web-notes/search_notes": "ask",
+    "web-notes/delete_note": "ask"
+  }
+}

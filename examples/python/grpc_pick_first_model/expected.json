@@ -1,0 +1,95 @@
+{
+  "ipv6 blackholed": {
+    "serial (1.86 default)": {
+      "ready_ms": 40030,
+      "address": "192.0.2.10:443",
+      "attempts_started": 3,
+      "max_parallel": 1,
+      "state": "READY",
+      "reresolution_requests": 0,
+      "trace": [
+        "0 ms: attempt order [2001:db8::10]:443, [2001:db8::11]:443, 192.0.2.10:443, 192.0.2.11:443",
+        "0 ms: connect [2001:db8::10]:443 -> timed out at 20000 ms",
+        "20000 ms: connect [2001:db8::11]:443 -> timed out at 40000 ms",
+        "40000 ms: connect 192.0.2.10:443 -> READY at 40030 ms"
+      ]
+    },
+    "happy eyeballs (GRPC_PF_USE_HAPPY_EYEBALLS=true)": {
+      "ready_ms": 280,
+      "address": "192.0.2.10:443",
+      "attempts_started": 2,
+      "max_parallel": 2,
+      "state": "READY",
+      "reresolution_requests": 0,
+      "trace": [
+        "0 ms: attempt order [2001:db8::10]:443, 192.0.2.10:443, [2001:db8::11]:443, 192.0.2.11:443",
+        "0 ms: start [2001:db8::10]:443 (first address) -> fails at 20000 ms",
+        "250 ms: start 192.0.2.10:443 (250 ms timer fired) -> READY at 280 ms",
+        "280 ms: 192.0.2.10:443 READY first; cancel timer, shut down 1 other subchannel(s)"
+      ]
+    }
+  },
+  "first address refused, duplicates": {
+    "serial (1.86 default)": {
+      "ready_ms": 42,
+      "address": "192.0.2.21:443",
+      "attempts_started": 2,
+      "max_parallel": 1,
+      "state": "READY",
+      "reresolution_requests": 0,
+      "trace": [
+        "0 ms: removed 1 duplicate address(es)",
+        "0 ms: attempt order 192.0.2.20:443, 192.0.2.21:443",
+        "0 ms: connect 192.0.2.20:443 -> refused at 2 ms",
+        "2 ms: connect 192.0.2.21:443 -> READY at 42 ms"
+      ]
+    },
+    "happy eyeballs (GRPC_PF_USE_HAPPY_EYEBALLS=true)": {
+      "ready_ms": 42,
+      "address": "192.0.2.21:443",
+      "attempts_started": 2,
+      "max_parallel": 1,
+      "state": "READY",
+      "reresolution_requests": 0,
+      "trace": [
+        "0 ms: removed 1 duplicate address(es)",
+        "0 ms: attempt order 192.0.2.20:443, 192.0.2.21:443",
+        "0 ms: start 192.0.2.20:443 (first address) -> fails at 2 ms",
+        "2 ms: start 192.0.2.21:443 (previous attempt failed) -> READY at 42 ms",
+        "42 ms: 192.0.2.21:443 READY first; cancel timer, shut down 1 other subchannel(s)"
+      ]
+    }
+  },
+  "all down": {
+    "serial (1.86 default)": {
+      "ready_ms": null,
+      "failed_ms": 20003,
+      "address": null,
+      "attempts_started": 2,
+      "max_parallel": 1,
+      "state": "TRANSIENT_FAILURE",
+      "reresolution_requests": 1,
+      "trace": [
+        "0 ms: attempt order 192.0.2.30:443, [2001:db8::30]:443",
+        "0 ms: connect 192.0.2.30:443 -> refused at 3 ms",
+        "3 ms: connect [2001:db8::30]:443 -> timed out at 20003 ms",
+        "20003 ms: every address failed once -> TRANSIENT_FAILURE, refresh name resolution"
+      ]
+    },
+    "happy eyeballs (GRPC_PF_USE_HAPPY_EYEBALLS=true)": {
+      "ready_ms": null,
+      "failed_ms": 20003,
+      "address": null,
+      "attempts_started": 2,
+      "max_parallel": 1,
+      "state": "TRANSIENT_FAILURE",
+      "reresolution_requests": 1,
+      "trace": [
+        "0 ms: attempt order 192.0.2.30:443, [2001:db8::30]:443",
+        "0 ms: start 192.0.2.30:443 (first address) -> fails at 3 ms",
+        "3 ms: start [2001:db8::30]:443 (previous attempt failed) -> fails at 20003 ms",
+        "20003 ms: every address failed once -> TRANSIENT_FAILURE, refresh name resolution"
+      ]
+    }
+  }
+}
