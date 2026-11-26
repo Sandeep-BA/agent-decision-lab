@@ -1,0 +1,71 @@
+{
+  "deltas_then_status": {
+    "per_update": {
+      "persisted": "",
+      "persisted_complete": false,
+      "append_display": "Your order BK-2231 ships Friday.",
+      "append_display_duplicates": false,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    },
+    "aggregate": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday."
+    },
+    "recommended": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    }
+  },
+  "last_chunk_on_final_delta": {
+    "per_update": {
+      "persisted": "ships Friday.",
+      "persisted_complete": false,
+      "append_display": "Your order BK-2231 ships Friday.",
+      "append_display_duplicates": false,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    },
+    "aggregate": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday."
+    },
+    "recommended": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    }
+  },
+  "full_artifact_at_end": {
+    "per_update": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    },
+    "aggregate": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday."
+    },
+    "recommended": {
+      "persisted": "Your order BK-2231 ships Friday.",
+      "persisted_complete": true,
+      "append_display": "Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.Your order BK-2231 ships Friday.",
+      "append_display_duplicates": true,
+      "keyed_display": "Your order BK-2231 ships Friday."
+    }
+  }
+}

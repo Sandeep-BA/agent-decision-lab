@@ -1,0 +1,12 @@
+[
+  {
+    "check_idle": false,
+    "idle_sockets_held": 20,
+    "half_closed_held": 20
+  },
+  {
+    "check_idle": true,
+    "idle_sockets_held": 0,
+    "half_closed_held": 0
+  }
+]

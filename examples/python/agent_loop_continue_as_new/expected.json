@@ -1,0 +1,123 @@
+{
+  "events_per_turn": 19,
+  "transcript_bytes_per_turn": 8300,
+  "inline_transcript": {
+    "turn": 112,
+    "limit": "size",
+    "events": 2128,
+    "bytes": 52567200,
+    "first_warning": {
+      "turn": 50,
+      "by": "size"
+    }
+  },
+  "transcript_by_reference": {
+    "turn": 2695,
+    "limit": "events",
+    "events": 51205,
+    "bytes": 23618980,
+    "first_warning": {
+      "turn": 539,
+      "by": "events"
+    }
+  },
+  "chain_500_turns_every_200": {
+    "runs": [
+      {
+        "run": 1,
+        "turns": [
+          1,
+          200
+        ],
+        "events": 3802
+      },
+      {
+        "run": 2,
+        "turns": [
+          201,
+          400
+        ],
+        "events": 3802
+      },
+      {
+        "run": 3,
+        "turns": [
+          401,
+          500
+        ],
+        "events": 1902
+      }
+    ],
+    "effects_executed": 500,
+    "unique_effects": 500,
+    "carried_state_example": {
+      "case_id": "CASE-7731",
+      "next_turn": 501,
+      "transcript_ref": "store://CASE-7731/transcript",
+      "summary": "summary through turn 500",
+      "completed_effect_keys": [
+        "CASE-7731:turn-451:add_case_note",
+        "CASE-7731:turn-452:add_case_note",
+        "CASE-7731:turn-453:add_case_note",
+        "CASE-7731:turn-454:add_case_note",
+        "CASE-7731:turn-455:add_case_note",
+        "CASE-7731:turn-456:add_case_note",
+        "CASE-7731:turn-457:add_case_note",
+        "CASE-7731:turn-458:add_case_note",
+        "CASE-7731:turn-459:add_case_note",
+        "CASE-7731:turn-460:add_case_note",
+        "CASE-7731:turn-461:add_case_note",
+        "CASE-7731:turn-462:add_case_note",
+        "CASE-7731:turn-463:add_case_note",
+        "CASE-7731:turn-464:add_case_note",
+        "CASE-7731:turn-465:add_case_note",
+        "CASE-7731:turn-466:add_case_note",
+        "CASE-7731:turn-467:add_case_note",
+        "CASE-7731:turn-468:add_case_note",
+        "CASE-7731:turn-469:add_case_note",
+        "CASE-7731:turn-470:add_case_note",
+        "CASE-7731:turn-471:add_case_note",
+        "CASE-7731:turn-472:add_case_note",
+        "CASE-7731:turn-473:add_case_note",
+        "CASE-7731:turn-474:add_case_note",
+        "CASE-7731:turn-475:add_case_note",
+        "CASE-7731:turn-476:add_case_note",
+        "CASE-7731:turn-477:add_case_note",
+        "CASE-7731:turn-478:add_case_note",
+        "CASE-7731:turn-479:add_case_note",
+        "CASE-7731:turn-480:add_case_note",
+        "CASE-7731:turn-481:add_case_note",
+        "CASE-7731:turn-482:add_case_note",
+        "CASE-7731:turn-483:add_case_note",
+        "CASE-7731:turn-484:add_case_note",
+        "CASE-7731:turn-485:add_case_note",
+        "CASE-7731:turn-486:add_case_note",
+        "CASE-7731:turn-487:add_case_note",
+        "CASE-7731:turn-488:add_case_note",
+        "CASE-7731:turn-489:add_case_note",
+        "CASE-7731:turn-490:add_case_note",
+        "CASE-7731:turn-491:add_case_note",
+        "CASE-7731:turn-492:add_case_note",
+        "CASE-7731:turn-493:add_case_note",
+        "CASE-7731:turn-494:add_case_note",
+        "CASE-7731:turn-495:add_case_note",
+        "CASE-7731:turn-496:add_case_note",
+        "CASE-7731:turn-497:add_case_note",
+        "CASE-7731:turn-498:add_case_note",
+        "CASE-7731:turn-499:add_case_note",
+        "CASE-7731:turn-500:add_case_note"
+      ],
+      "pending_approval": null
+    }
+  },
+  "mid_turn_boundary": [
+    {
+      "key_scheme": "run_id",
+      "refunds_sent_for_turn_200": 2
+    },
+    {
+      "key_scheme": "case_turn",
+      "refunds_sent_for_turn_200": 1
+    }
+  ]
+}

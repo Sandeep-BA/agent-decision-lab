@@ -71,6 +71,14 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`valkey_9_2_upgrade_checks`](valkey_9_2_upgrade_checks/) | Valkey 9.2 behaviour changes as models: bare score bounds and save points counting active expiry | `python -m unittest discover -s examples/python/valkey_9_2_upgrade_checks -p "test_*.py"` |
 | [`set_member_ttl_model`](set_member_ttl_model/) | Redis 8.12 set-member expiration replies, reproducing every redis.io example (a model, not a server) | `python -m unittest discover -s examples/python/set_member_ttl_model -p "test_*.py"` |
 | [`spring_forwarded_header_migration`](spring_forwarded_header_migration/) | Spring Boot 4.2 forwarded-header properties: mapping, mutual exclusion and prefix rules from v4.2.0 sources | `python -m unittest discover -s examples/python/spring_forwarded_header_migration -p "test_*.py"` |
+| [`agent_trace_tail_sampling`](agent_trace_tail_sampling/) | Tail-sampling agent traces by run outcome, segments at durable pauses and a run-level sample bucket | `python -m unittest discover -s examples/python/agent_trace_tail_sampling -p "test_*.py"` |
+| [`agent_loop_continue_as_new`](agent_loop_continue_as_new/) | Durable-workflow history growth per agent turn, inline versus referenced transcripts, continue-as-new state and effect keys | `python -m unittest discover -s examples/python/agent_loop_continue_as_new -p "test_*.py"` |
+| [`filtered_vector_overfetch`](filtered_vector_overfetch/) | Post-filtered nearest-neighbour search: survivors for independent and clustered filters, overfetch, iterative scans and pre-filtering | `python -m unittest discover -s examples/python/filtered_vector_overfetch -p "test_*.py"` |
+| [`mcp_annotation_policy`](mcp_annotation_policy/) | MCP tool annotations as untrusted hints: schema defaults, host classification pinned to a definition digest | `python -m unittest discover -s examples/python/mcp_annotation_policy -p "test_*.py"` |
+| [`close_wait_probe`](close_wait_probe/) | CLOSE_WAIT on loopback: a keep-alive pool that keeps half-closed sockets and the MSG_PEEK fix | `python -m unittest discover -s examples/python/close_wait_probe -p "test_*.py"` |
+| [`grpc_pick_first_model`](grpc_pick_first_model/) | grpc-java 1.86.0 pick_first first pass: serial attempts versus Happy Eyeballs (a model of the source) | `python -m unittest discover -s examples/python/grpc_pick_first_model -p "test_*.py"` |
+| [`zip_size_agreement`](zip_size_agreement/) | ZIP data descriptor versus central-directory sizes: zipfile and a streaming reader diverge, and the agreement check | `python -m unittest discover -s examples/python/zip_size_agreement -p "test_*.py"` |
+| [`a2a_stream_persistence`](a2a_stream_persistence/) | Streamed A2A answers: what per-update, aggregated and replacement final events persist and display | `python -m unittest discover -s examples/python/a2a_stream_persistence -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
@@ -82,3 +90,7 @@ A Go example, [`../go/llm_call_budget`](../go/llm_call_budget/), tests model-cal
 A Java example, [`../java/tls_missing_intermediate`](../java/tls_missing_intermediate/), serves a leaf-only and a full TLS chain from the JDK HTTPS server and measures six client cases with `sh run.sh` (JDK 17 or newer).
 
 A SQL example, [`../sql/postgres_virtual_generated_columns`](../sql/postgres_virtual_generated_columns/), checks 25 PostgreSQL 18 generated-column statements against stated outcomes with `python run.py` and a disposable database.
+
+A Java example, [`../java/chm_recursive_update`](../java/chm_recursive_update/), shows `ConcurrentHashMap.computeIfAbsent` throwing `Recursive update` or deadlocking when its function touches the same map, with `sh run.sh` (JDK 17 or newer).
+
+A SQL example, [`../sql/postgres_invalid_concurrent_index`](../sql/postgres_invalid_concurrent_index/), records what failed `CREATE INDEX CONCURRENTLY` and `REINDEX CONCURRENTLY` leave behind on PostgreSQL 18 with `python run.py` and a disposable database.

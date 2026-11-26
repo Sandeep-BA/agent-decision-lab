@@ -1,0 +1,8 @@
+flags bit 3 (data descriptor): True central csize: 86 usize: 258
+streaming reader: consumed 86 descriptor csize 86 bytes out 258
+patched central csize: 29
+zipfile: BadZipFile - Bad CRC-32 for file 'pkg/__init__.py'
+streaming reader after patch: consumed 86 bytes out 258 descriptor csize 86
+strict check (descriptor == central == consumed): False
+check_members(original): []
+check_members(patched): [{'name': 'pkg/__init__.py', 'consumed': 86, 'descriptor': 86, 'central': 29}]

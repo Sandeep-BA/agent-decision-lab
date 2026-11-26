@@ -1,0 +1,52 @@
+{
+  "server_version": "18.4",
+  "unique_build": "UniqueViolation",
+  "after_unique_failure": {
+    "valid": false,
+    "ready": false,
+    "bytes": 0
+  },
+  "unique_leftover_bytes_after_inserts": 0,
+  "reindex": "UniqueViolation",
+  "after_reindex_failure": [
+    "cic_ref_key",
+    "cic_ref_key_ccnew"
+  ],
+  "phase_when_cancelled": "waiting for old snapshots",
+  "cancelled_build": "QueryCanceled",
+  "after_cancel": {
+    "valid": false,
+    "ready": true
+  },
+  "ready_leftover_bytes_before_after_50000_inserts": [
+    4521984,
+    6094848
+  ],
+  "ready_leftover_grew_on_insert": true,
+  "planner_uses_leftover": false,
+  "lock_timeout_build": "LockNotAvailable",
+  "after_lock_timeout": {
+    "valid": false,
+    "ready": true
+  },
+  "invalid_listing": [
+    [
+      "cic_note_idx",
+      true
+    ],
+    [
+      "cic_ref_idx",
+      true
+    ],
+    [
+      "cic_ref_key",
+      false
+    ],
+    [
+      "cic_ref_key_ccnew",
+      false
+    ]
+  ],
+  "after_cleanup": [],
+  "mismatches": []
+}

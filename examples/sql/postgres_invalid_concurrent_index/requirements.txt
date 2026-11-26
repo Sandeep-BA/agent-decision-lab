@@ -1,0 +1,2 @@
+# Author: Sandeep Belgavi. Pinned driver for the probe.
+psycopg[binary]==3.2.10
