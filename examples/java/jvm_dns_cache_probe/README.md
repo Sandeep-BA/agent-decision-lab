@@ -14,4 +14,6 @@ sh run.sh
 
 `run.sh` takes about two and a half minutes because the scenarios sleep in real time. Expected output: `expected-jdk23-windows.txt`. Recorded counts: default settings consulted the resolver at 0, 30.3 and 60.5 s over 65 lookups; `networkaddress.cache.ttl=5` every 5 s; `0` on every lookup; failed lookups were cached for 10 s; with `ttl=3` and the resolver failing from 5 s, lookups failed from 6 s without a stale window and kept succeeding until 15 s with `networkaddress.cache.stale.ttl=10`.
 
-Limitations: timings are rounded to the one-second lookup interval and include scheduling jitter. The security properties are set programmatically before the first lookup; setting them later has no effect in this probe. Views are my own and do not represent any employer, past or present.
+A seventh scenario, `late`, sets `networkaddress.cache.ttl=0` after the first lookup: the resolver was still called only once in six lookups, so the policy in force at the first lookup kept applying.
+
+Limitations: timings are rounded to the one-second lookup interval and include scheduling jitter. The other scenarios set the security properties programmatically before the first lookup. Views are my own and do not represent any employer, past or present.

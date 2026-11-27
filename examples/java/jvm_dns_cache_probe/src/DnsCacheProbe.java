@@ -14,8 +14,9 @@ public class DnsCacheProbe {
         CountingResolverProvider.start = System.nanoTime();
         int ok = 0, failed = 0;
         for (int t = 0; t < seconds; t++) {
+            if (scenario.equals("late") && t == 1) { Security.setProperty("networkaddress.cache.ttl", "0"); System.out.println("networkaddress.cache.ttl set to 0 after the first lookup"); }
             if (failAt >= 0 && t == failAt) { CountingResolverProvider.failing = true; System.out.println("resolver starts failing at " + t + " s"); }
-            try { InetAddress a = InetAddress.getByName(host); ok++; if (t % 5 == 0 || failAt >= 0) System.out.println("t=" + t + " s -> " + a.getHostAddress()); }
+            try { InetAddress a = InetAddress.getByName(host); ok++; if (t % 5 == 0 || failAt >= 0 || scenario.equals("late")) System.out.println("t=" + t + " s -> " + a.getHostAddress()); }
             catch (UnknownHostException e) { failed++; if (t % 5 == 0 || failAt >= 0) System.out.println("t=" + t + " s -> UnknownHostException"); }
             Thread.sleep(1000);
         }

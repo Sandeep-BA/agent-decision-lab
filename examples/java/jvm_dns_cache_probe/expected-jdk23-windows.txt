@@ -107,3 +107,13 @@ resolver call 6 at 15.2 s for orders.bookstore.test
 resolver call 7 at 16.2 s for orders.bookstore.test
 resolver call 8 at 26.3 s for orders.bookstore.test
 scenario=stale lookups=30 ok=16 failed=14 resolverCalls=8
+### late
+t=0 s -> 10.0.0.10
+networkaddress.cache.ttl set to 0 after the first lookup
+t=1 s -> 10.0.0.10
+t=2 s -> 10.0.0.10
+t=3 s -> 10.0.0.10
+t=4 s -> 10.0.0.10
+t=5 s -> 10.0.0.10
+resolver call 1 at 0.0 s for orders.bookstore.test
+scenario=late lookups=6 ok=6 failed=0 resolverCalls=1

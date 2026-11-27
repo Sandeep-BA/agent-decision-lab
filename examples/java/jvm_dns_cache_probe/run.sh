@@ -12,3 +12,4 @@ java -cp out DnsCacheProbe ttl0 6 0
 java -cp out DnsCacheProbe negative 25
 java -cp out DnsCacheProbe nostale 12 3 - - 5
 java -cp out DnsCacheProbe stale 30 3 - 10 5
+java -cp out DnsCacheProbe late 6
