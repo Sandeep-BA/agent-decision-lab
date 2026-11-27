@@ -1,0 +1,149 @@
+{
+  "server_version_major": "18",
+  "cases": {
+    "on_conflict_do_update_repeated_key": {
+      "sqlstate": "21000",
+      "message": "ON CONFLICT DO UPDATE command cannot affect row a second time",
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ]
+      ]
+    },
+    "on_conflict_do_nothing_repeated_key": {
+      "sqlstate": null,
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ],
+        [
+          "978-0003",
+          7,
+          "feed-a"
+        ]
+      ]
+    },
+    "do_update_repeated_new_key": {
+      "sqlstate": "21000",
+      "message": "ON CONFLICT DO UPDATE command cannot affect row a second time",
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ]
+      ]
+    },
+    "do_nothing_repeated_new_key": {
+      "sqlstate": null,
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ],
+        [
+          "978-0009",
+          1,
+          "feed-a"
+        ]
+      ]
+    },
+    "merge_repeated_matched_key": {
+      "sqlstate": "21000",
+      "message": "MERGE command cannot affect row a second time",
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ]
+      ]
+    },
+    "merge_repeated_new_key": {
+      "sqlstate": "23505",
+      "message": "duplicate key value violates unique constraint \"upsert_stock_pkey\"",
+      "rows": [
+        [
+          "978-0001",
+          5,
+          "seed"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ]
+      ]
+    },
+    "pre_aggregate_sum": {
+      "sqlstate": null,
+      "rows": [
+        [
+          "978-0001",
+          12,
+          "feed-a+feed-b"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ],
+        [
+          "978-0003",
+          7,
+          "feed-a"
+        ]
+      ]
+    },
+    "last_wins_by_sequence": {
+      "sqlstate": null,
+      "rows": [
+        [
+          "978-0001",
+          4,
+          "feed-b"
+        ],
+        [
+          "978-0002",
+          1,
+          "seed"
+        ],
+        [
+          "978-0003",
+          7,
+          "feed-a"
+        ]
+      ]
+    }
+  }
+}

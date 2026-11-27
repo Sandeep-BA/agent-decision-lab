@@ -1,0 +1,92 @@
+{
+  "upsert_cases": [
+    {
+      "version": "vulnerable",
+      "grants": [
+        "create"
+      ],
+      "allowed": true,
+      "status": "Replaced",
+      "cleared": [
+        "password",
+        "username"
+      ],
+      "proxy_after": "http://proxy.attacker.test:3128",
+      "trace": [
+        "create permission checked",
+        "upsert replaced the stored repository without checking update (GHSA-mfgm-4p7x-3ccr)"
+      ]
+    },
+    {
+      "version": "vulnerable",
+      "grants": [
+        "create",
+        "update"
+      ],
+      "allowed": true,
+      "status": "Replaced",
+      "cleared": [
+        "password",
+        "username"
+      ],
+      "proxy_after": "http://proxy.attacker.test:3128",
+      "trace": [
+        "create permission checked",
+        "upsert replaced the stored repository without checking update (GHSA-mfgm-4p7x-3ccr)"
+      ]
+    },
+    {
+      "version": "patched",
+      "grants": [
+        "create"
+      ],
+      "allowed": false,
+      "status": "PermissionDenied",
+      "cleared": [],
+      "proxy_after": "",
+      "trace": [
+        "create permission checked",
+        "upsert routed through the update handler",
+        "update permission missing; stored repository left unchanged"
+      ]
+    },
+    {
+      "version": "patched",
+      "grants": [
+        "create",
+        "update"
+      ],
+      "allowed": true,
+      "status": "Replaced",
+      "cleared": [
+        "password",
+        "username"
+      ],
+      "proxy_after": "http://proxy.attacker.test:3128",
+      "trace": [
+        "create permission checked",
+        "upsert routed through the update handler",
+        "update permission present; replaced"
+      ]
+    }
+  ],
+  "create_without_upsert": {
+    "allowed": false,
+    "status": "InvalidArgument"
+  },
+  "identical_create": "Unchanged",
+  "audit": [
+    {
+      "route": "POST /repositories?upsert=true",
+      "finding": "replaces existing objects but does not require update"
+    },
+    {
+      "route": "PUT /stores/{id}",
+      "finding": "replaces existing objects but does not require update"
+    },
+    {
+      "route": "POST /imports (merge mode)",
+      "finding": "replaces existing objects but does not require update"
+    }
+  ]
+}

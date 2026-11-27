@@ -1,0 +1,255 @@
+{
+  "lost response, no ids": {
+    "v0.165.0 defaults": {
+      "attempts": 1,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [
+        [
+          0,
+          "timeout"
+        ],
+        [
+          1,
+          "timeout"
+        ],
+        [
+          2,
+          "timeout"
+        ],
+        [
+          3,
+          "timeout"
+        ],
+        [
+          4,
+          "timeout"
+        ]
+      ],
+      "trace": [
+        "attempt 1: applied 5 documents, response lost (client timeout)"
+      ]
+    },
+    "v0.166.0 defaults": {
+      "attempts": 2,
+      "stored_documents": 10,
+      "distinct_records_stored": 5,
+      "duplicates": 5,
+      "lost_records": 0,
+      "reported_failed": [],
+      "trace": [
+        "attempt 1: applied 5 documents, response lost (client timeout)",
+        "attempt 2: item statuses [201, 201, 201, 201, 201]"
+      ]
+    }
+  },
+  "lost response, deterministic ids": {
+    "v0.165.0 defaults": {
+      "attempts": 1,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [
+        [
+          0,
+          "timeout"
+        ],
+        [
+          1,
+          "timeout"
+        ],
+        [
+          2,
+          "timeout"
+        ],
+        [
+          3,
+          "timeout"
+        ],
+        [
+          4,
+          "timeout"
+        ]
+      ],
+      "trace": [
+        "attempt 1: applied 5 documents, response lost (client timeout)"
+      ]
+    },
+    "v0.166.0 defaults": {
+      "attempts": 2,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [
+        [
+          0,
+          409
+        ],
+        [
+          1,
+          409
+        ],
+        [
+          2,
+          409
+        ],
+        [
+          3,
+          409
+        ],
+        [
+          4,
+          409
+        ]
+      ],
+      "trace": [
+        "attempt 1: applied 5 documents, response lost (client timeout)",
+        "attempt 2: item statuses [409, 409, 409, 409, 409]"
+      ]
+    }
+  },
+  "503 before apply": {
+    "v0.165.0 defaults": {
+      "attempts": 1,
+      "stored_documents": 0,
+      "distinct_records_stored": 0,
+      "duplicates": 0,
+      "lost_records": 5,
+      "reported_failed": [
+        [
+          0,
+          503
+        ],
+        [
+          1,
+          503
+        ],
+        [
+          2,
+          503
+        ],
+        [
+          3,
+          503
+        ],
+        [
+          4,
+          503
+        ]
+      ],
+      "trace": [
+        "attempt 1: HTTP 503, nothing applied"
+      ]
+    },
+    "v0.166.0 defaults": {
+      "attempts": 2,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [],
+      "trace": [
+        "attempt 1: HTTP 503, nothing applied",
+        "attempt 2: item statuses [201, 201, 201, 201, 201]"
+      ]
+    }
+  },
+  "two documents rejected with 429": {
+    "v0.165.0 defaults": {
+      "attempts": 2,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [],
+      "trace": [
+        "attempt 1: item statuses [201, 429, 201, 429, 201]",
+        "attempt 2: item statuses [201, 201]"
+      ]
+    },
+    "v0.166.0 defaults": {
+      "attempts": 2,
+      "stored_documents": 5,
+      "distinct_records_stored": 5,
+      "duplicates": 0,
+      "lost_records": 0,
+      "reported_failed": [],
+      "trace": [
+        "attempt 1: item statuses [201, 429, 201, 429, 201]",
+        "attempt 2: item statuses [201, 201]"
+      ]
+    }
+  },
+  "malformed request (400)": {
+    "v0.165.0 defaults": {
+      "attempts": 1,
+      "stored_documents": 0,
+      "distinct_records_stored": 0,
+      "duplicates": 0,
+      "lost_records": 5,
+      "reported_failed": [
+        [
+          0,
+          400
+        ],
+        [
+          1,
+          400
+        ],
+        [
+          2,
+          400
+        ],
+        [
+          3,
+          400
+        ],
+        [
+          4,
+          400
+        ]
+      ],
+      "trace": [
+        "attempt 1: HTTP 400, nothing applied"
+      ]
+    },
+    "v0.166.0 defaults": {
+      "attempts": 3,
+      "stored_documents": 0,
+      "distinct_records_stored": 0,
+      "duplicates": 0,
+      "lost_records": 5,
+      "reported_failed": [
+        [
+          0,
+          400
+        ],
+        [
+          1,
+          400
+        ],
+        [
+          2,
+          400
+        ],
+        [
+          3,
+          400
+        ],
+        [
+          4,
+          400
+        ]
+      ],
+      "trace": [
+        "attempt 1: HTTP 400, nothing applied",
+        "attempt 2: HTTP 400, nothing applied",
+        "attempt 3: HTTP 400, nothing applied"
+      ]
+    }
+  }
+}

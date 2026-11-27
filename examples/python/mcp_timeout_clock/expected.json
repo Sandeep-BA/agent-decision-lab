@@ -1,0 +1,114 @@
+{
+  "steady-progress": {
+    "outcome": "result",
+    "stopped_waiting_ms": 110000,
+    "cancellation_sent": false,
+    "progress_resets": 5,
+    "late_result_ignored": false,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms; ceiling 300000 ms (sdk)",
+      "20000 ms: progress received; idle deadline moved to 80000 ms",
+      "40000 ms: progress received; idle deadline moved to 100000 ms",
+      "60000 ms: progress received; idle deadline moved to 120000 ms",
+      "80000 ms: progress received; idle deadline moved to 140000 ms",
+      "100000 ms: progress received; idle deadline moved to 160000 ms",
+      "110000 ms: result received before the deadline"
+    ]
+  },
+  "no-reset-long-job": {
+    "outcome": "idle-timeout",
+    "stopped_waiting_ms": 60000,
+    "cancellation_sent": true,
+    "progress_resets": 0,
+    "late_result_ignored": true,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms",
+      "20000 ms: progress received; clock not reset (deadline stays 60000 ms)",
+      "40000 ms: progress received; clock not reset (deadline stays 60000 ms)",
+      "60000 ms: idle timeout fired; notifications/cancelled sent",
+      "90000 ms: late result arrives and is ignored; check whether the work already took effect"
+    ]
+  },
+  "chatty-forever": {
+    "outcome": "max-total-exceeded",
+    "stopped_waiting_ms": 300000,
+    "cancellation_sent": false,
+    "progress_resets": 11,
+    "late_result_ignored": false,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms; ceiling 300000 ms (sdk)",
+      "25000 ms: progress received; idle deadline moved to 85000 ms",
+      "50000 ms: progress received; idle deadline moved to 110000 ms",
+      "75000 ms: progress received; idle deadline moved to 135000 ms",
+      "100000 ms: progress received; idle deadline moved to 160000 ms",
+      "125000 ms: progress received; idle deadline moved to 185000 ms",
+      "150000 ms: progress received; idle deadline moved to 210000 ms",
+      "175000 ms: progress received; idle deadline moved to 235000 ms",
+      "200000 ms: progress received; idle deadline moved to 260000 ms",
+      "225000 ms: progress received; idle deadline moved to 285000 ms",
+      "250000 ms: progress received; idle deadline moved to 310000 ms",
+      "275000 ms: progress received; idle deadline moved to 335000 ms",
+      "300000 ms: progress received after the 300000 ms ceiling; request rejected, no notifications/cancelled sent"
+    ]
+  },
+  "chatty-forever-timer": {
+    "outcome": "ceiling-cancelled",
+    "stopped_waiting_ms": 300000,
+    "cancellation_sent": true,
+    "progress_resets": 11,
+    "late_result_ignored": false,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms; ceiling 300000 ms (timer)",
+      "25000 ms: progress received; idle deadline moved to 85000 ms",
+      "50000 ms: progress received; idle deadline moved to 110000 ms",
+      "75000 ms: progress received; idle deadline moved to 135000 ms",
+      "100000 ms: progress received; idle deadline moved to 160000 ms",
+      "125000 ms: progress received; idle deadline moved to 185000 ms",
+      "150000 ms: progress received; idle deadline moved to 210000 ms",
+      "175000 ms: progress received; idle deadline moved to 235000 ms",
+      "200000 ms: progress received; idle deadline moved to 260000 ms",
+      "225000 ms: progress received; idle deadline moved to 285000 ms",
+      "250000 ms: progress received; idle deadline moved to 310000 ms",
+      "275000 ms: progress received; idle deadline moved to 335000 ms",
+      "300000 ms: ceiling timer fired; notifications/cancelled sent"
+    ]
+  },
+  "stalls-before-ceiling": {
+    "outcome": "idle-timeout",
+    "stopped_waiting_ms": 350000,
+    "cancellation_sent": true,
+    "progress_resets": 6,
+    "late_result_ignored": false,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms; ceiling 300000 ms (sdk)",
+      "50000 ms: progress received; idle deadline moved to 110000 ms",
+      "100000 ms: progress received; idle deadline moved to 160000 ms",
+      "150000 ms: progress received; idle deadline moved to 210000 ms",
+      "200000 ms: progress received; idle deadline moved to 260000 ms",
+      "250000 ms: progress received; idle deadline moved to 310000 ms",
+      "290000 ms: progress received; idle deadline moved to 350000 ms",
+      "350000 ms: idle timeout fired; notifications/cancelled sent"
+    ]
+  },
+  "stalls-before-ceiling-timer": {
+    "outcome": "ceiling-cancelled",
+    "stopped_waiting_ms": 300000,
+    "cancellation_sent": true,
+    "progress_resets": 6,
+    "late_result_ignored": false,
+    "trace": [
+      "0 ms: request sent; idle deadline 60000 ms; ceiling 300000 ms (timer)",
+      "50000 ms: progress received; idle deadline moved to 110000 ms",
+      "100000 ms: progress received; idle deadline moved to 160000 ms",
+      "150000 ms: progress received; idle deadline moved to 210000 ms",
+      "200000 ms: progress received; idle deadline moved to 260000 ms",
+      "250000 ms: progress received; idle deadline moved to 310000 ms",
+      "290000 ms: progress received; idle deadline moved to 350000 ms",
+      "300000 ms: ceiling timer fired; notifications/cancelled sent"
+    ]
+  },
+  "worst_case_wait_ms": {
+    "sdk": 360000,
+    "timer": 300000
+  }
+}
