@@ -1,0 +1,82 @@
+{
+  "runs": 400,
+  "raw_variants": 58,
+  "normalized_variants": 49,
+  "top4_variant_share": 0.782,
+  "compiled_feature_groups": 5,
+  "owned_by_workflow": 346,
+  "owned_share": 0.865,
+  "workflow_matches_recorded_path": 336,
+  "match_rate_on_owned": 0.971,
+  "residual_to_agent": 54,
+  "groups": [
+    {
+      "kind": "return",
+      "decided_by": [
+        "within_30_days"
+      ],
+      "values": [
+        false
+      ],
+      "runs": 71,
+      "top_variant": "get_order > check_return_window > escalate_to_person",
+      "purity": 0.972,
+      "compiled": true
+    },
+    {
+      "kind": "return",
+      "decided_by": [
+        "within_30_days"
+      ],
+      "values": [
+        true
+      ],
+      "runs": 84,
+      "top_variant": "get_order > check_return_window > create_return_label",
+      "purity": 0.964,
+      "compiled": true
+    },
+    {
+      "kind": "refund_status",
+      "decided_by": [],
+      "values": [],
+      "runs": 127,
+      "top_variant": "get_order > get_refund",
+      "purity": 0.961,
+      "compiled": true
+    },
+    {
+      "kind": "damaged",
+      "decided_by": [
+        "over_2000"
+      ],
+      "values": [
+        false
+      ],
+      "runs": 41,
+      "top_variant": "get_order > request_photo > create_replacement",
+      "purity": 1.0,
+      "compiled": true
+    },
+    {
+      "kind": "damaged",
+      "decided_by": [
+        "over_2000"
+      ],
+      "values": [
+        true
+      ],
+      "runs": 23,
+      "top_variant": "get_order > request_photo > request_approval > create_replacement",
+      "purity": 1.0,
+      "compiled": true
+    },
+    {
+      "kind": "other",
+      "runs": 54,
+      "decided_by": null,
+      "compiled": false,
+      "distinct_variants": 41
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "chunk_size": 360,
+  "overlap": 120,
+  "k": 6,
+  "query": "refund for a damaged book that was returned",
+  "chunks_indexed": 10,
+  "plain_top_k": {
+    "passages": 6,
+    "chars_in_context": 1874,
+    "unique_chars": 1413,
+    "repeated_share": 0.246,
+    "documents": [
+      "damaged-items-checklist",
+      "returns-policy"
+    ],
+    "spans": [
+      [
+        "returns-policy",
+        0,
+        356,
+        1.1339
+      ],
+      [
+        "returns-policy",
+        726,
+        1049,
+        0.8018
+      ],
+      [
+        "returns-policy",
+        244,
+        600,
+        0.7746
+      ],
+      [
+        "damaged-items-checklist",
+        0,
+        355,
+        0.6202
+      ],
+      [
+        "returns-policy",
+        481,
+        839,
+        0.504
+      ],
+      [
+        "damaged-items-checklist",
+        238,
+        364,
+        0.2132
+      ]
+    ]
+  },
+  "exact_text_dedup_keeps": 6,
+  "span_merged_same_budget": {
+    "passages": 3,
+    "chars_in_context": 1760,
+    "unique_chars": 1760,
+    "repeated_share": 0.0,
+    "documents": [
+      "damaged-items-checklist",
+      "gift-cards",
+      "returns-policy"
+    ],
+    "spans": [
+      [
+        "returns-policy",
+        0,
+        1049,
+        1.1339
+      ],
+      [
+        "damaged-items-checklist",
+        0,
+        364,
+        0.6202
+      ],
+      [
+        "gift-cards",
+        0,
+        347,
+        0.1213
+      ]
+    ]
+  }
+}

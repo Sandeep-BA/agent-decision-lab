@@ -1,0 +1,58 @@
+{
+  "headers": {
+    "Deprecation": "@1796083200",
+    "Sunset": "Fri, 15 Jan 2027 00:00:00 GMT",
+    "Link": "<https://docs.bookstore.test/tools/lookup-order-migration>; rel=\"deprecation\"; type=\"text/html\""
+  },
+  "tool_listing": {
+    "name": "lookup_order_v1",
+    "description": "DEPRECATED: use lookup_order (same result, argument order_id). Removed after 2027-01-15.",
+    "_meta": {
+      "bookstore.test/deprecation": {
+        "replacement": "lookup_order",
+        "sunset": "2027-01-15"
+      }
+    }
+  },
+  "inventory": [
+    {
+      "caller": "helpdesk-agent",
+      "prompt_version": "prompt-41",
+      "calls": 29,
+      "last_seen": "2026-12-20"
+    },
+    {
+      "caller": "nightly-report (service)",
+      "prompt_version": null,
+      "calls": 14,
+      "last_seen": "2026-12-20"
+    },
+    {
+      "caller": "returns-agent",
+      "prompt_version": "prompt-7",
+      "calls": 13,
+      "last_seen": "2026-12-20"
+    },
+    {
+      "caller": "helpdesk-agent",
+      "prompt_version": "prompt-42",
+      "calls": 6,
+      "last_seen": "2026-12-20"
+    }
+  ],
+  "alias_results": {
+    "translated": 62,
+    "unexpected arguments ['include', 'order_ref']": 1
+  },
+  "removal_gate": {
+    "may_remove": false,
+    "reasons": [
+      "sunset date not reached",
+      "62 calls from 4 caller versions in the window"
+    ]
+  },
+  "removal_gate_after_migration": {
+    "may_remove": true,
+    "reasons": []
+  }
+}

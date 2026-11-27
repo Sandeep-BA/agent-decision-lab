@@ -79,6 +79,14 @@ None of them calls a model provider; they exercise the runtime mechanics around 
 | [`grpc_pick_first_model`](grpc_pick_first_model/) | grpc-java 1.86.0 pick_first first pass: serial attempts versus Happy Eyeballs (a model of the source) | `python -m unittest discover -s examples/python/grpc_pick_first_model -p "test_*.py"` |
 | [`zip_size_agreement`](zip_size_agreement/) | ZIP data descriptor versus central-directory sizes: zipfile and a streaming reader diverge, and the agreement check | `python -m unittest discover -s examples/python/zip_size_agreement -p "test_*.py"` |
 | [`a2a_stream_persistence`](a2a_stream_persistence/) | Streamed A2A answers: what per-update, aggregated and replacement final events persist and display | `python -m unittest discover -s examples/python/a2a_stream_persistence -p "test_*.py"` |
+| [`trace_path_mining`](trace_path_mining/) | Tool-call variants from recorded agent runs, the attributes that decide the path, and a compiled workflow replayed against the runs | `python -m unittest discover -s examples/python/trace_path_mining -p "test_*.py"` |
+| [`tool_deprecation_inventory`](tool_deprecation_inventory/) | Retiring a tool agents call: Deprecation and Sunset fields, a strict alias, a caller inventory by prompt version and a removal gate | `python -m unittest discover -s examples/python/tool_deprecation_inventory -p "test_*.py"` |
+| [`chunk_span_merge`](chunk_span_merge/) | Overlapping chunks in top-k: repeated-text share, exact-text de-duplication missing it, and merging hits by source span | `python -m unittest discover -s examples/python/chunk_span_merge -p "test_*.py"` |
+| [`mcp_timeout_clock`](mcp_timeout_clock/) | MCP request clocks: idle timeout, reset on progress and a ceiling checked on progress or by its own timer | `python -m unittest discover -s examples/python/mcp_timeout_clock -p "test_*.py"` |
+| [`hpa_behavior_model`](hpa_behavior_model/) | autoscaling/v2 HPA scale-down timelines from the v1.37.3 controller rules: tolerance, stabilization window and rate policies (a calculation) | `python -m unittest discover -s examples/python/hpa_behavior_model -p "test_*.py"` |
+| [`upsert_permission_model`](upsert_permission_model/) | Create versus upsert versus update permissions, modelled from Argo CD GHSA-mfgm-4p7x-3ccr, with an audit of create-or-replace routes | `python -m unittest discover -s examples/python/upsert_permission_model -p "test_*.py"` |
+| [`mount_flag_race_model`](mount_flag_race_model/) | docker cp mount setup order: read-only flags applied through a re-resolved path versus a staged mount moved onto a descriptor (a model) | `python -m unittest discover -s examples/python/mount_flag_race_model -p "test_*.py"` |
+| [`es_bulk_retry_model`](es_bulk_retry_model/) | Elasticsearch exporter retry defaults in Collector Contrib v0.165.0 and v0.166.0: duplicates, 409s and lost batches (a model) | `python -m unittest discover -s examples/python/es_bulk_retry_model -p "test_*.py"` |
 
 Run the commands from the repository root. The Java recipes in `src/` are unaffected by
 this directory; nothing here is built by Maven.
@@ -94,3 +102,7 @@ A SQL example, [`../sql/postgres_virtual_generated_columns`](../sql/postgres_vir
 A Java example, [`../java/chm_recursive_update`](../java/chm_recursive_update/), shows `ConcurrentHashMap.computeIfAbsent` throwing `Recursive update` or deadlocking when its function touches the same map, with `sh run.sh` (JDK 17 or newer).
 
 A SQL example, [`../sql/postgres_invalid_concurrent_index`](../sql/postgres_invalid_concurrent_index/), records what failed `CREATE INDEX CONCURRENTLY` and `REINDEX CONCURRENTLY` leave behind on PostgreSQL 18 with `python run.py` and a disposable database.
+
+A Java example, [`../java/jvm_dns_cache_probe`](../java/jvm_dns_cache_probe/), measures the JDK name cache with a counting `InetAddressResolverProvider` (JEP 418) under default, short, zero, negative and stale settings, with `sh run.sh` (JDK 18 or newer).
+
+A SQL example, [`../sql/postgres_batch_upsert_duplicates`](../sql/postgres_batch_upsert_duplicates/), records how `ON CONFLICT DO UPDATE`, `DO NOTHING` and `MERGE` handle a key repeated inside one batch on PostgreSQL 18, and two deterministic pre-aggregations, with `python run.py` and a disposable database.

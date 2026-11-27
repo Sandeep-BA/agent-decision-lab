@@ -1,0 +1,138 @@
+{
+  "interleavings_where_read_only_source_stays_writable": {
+    "before-fix": [
+      2
+    ],
+    "after-fix": []
+  },
+  "results": [
+    {
+      "order": "before-fix",
+      "swap_after_step": -1,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon binds host:/srv/ro on the descriptor",
+        "daemon reads the path back from the descriptor: /vol/b/ro",
+        "daemon remounts read-only by path; flag lands on host:/srv/ro"
+      ]
+    },
+    {
+      "order": "before-fix",
+      "swap_after_step": 0,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon opens /vol/b/ro by descriptor",
+        "container swaps /vol/a and /vol/b",
+        "daemon binds host:/srv/ro on the descriptor",
+        "daemon reads the path back from the descriptor: /vol/a/ro",
+        "daemon remounts read-only by path; flag lands on host:/srv/ro"
+      ]
+    },
+    {
+      "order": "before-fix",
+      "swap_after_step": 1,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon binds host:/srv/ro on the descriptor",
+        "container swaps /vol/a and /vol/b",
+        "daemon reads the path back from the descriptor: /vol/a/ro",
+        "daemon remounts read-only by path; flag lands on host:/srv/ro"
+      ]
+    },
+    {
+      "order": "before-fix",
+      "swap_after_step": 2,
+      "ro_source_writable": true,
+      "decoy_made_readonly": true,
+      "trace": [
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon binds host:/srv/ro on the descriptor",
+        "daemon reads the path back from the descriptor: /vol/b/ro",
+        "container swaps /vol/a and /vol/b",
+        "daemon remounts read-only by path; flag lands on host:/srv/decoy"
+      ]
+    },
+    {
+      "order": "before-fix",
+      "swap_after_step": 3,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon binds host:/srv/ro on the descriptor",
+        "daemon reads the path back from the descriptor: /vol/b/ro",
+        "daemon remounts read-only by path; flag lands on host:/srv/ro",
+        "container swaps /vol/a and /vol/b"
+      ]
+    },
+    {
+      "order": "after-fix",
+      "swap_after_step": -1,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon binds host:/srv/ro on a private stub",
+        "daemon makes the stub read-only; flag lands on host:/srv/ro",
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon moves the finished mount onto the descriptor (MS_MOVE)"
+      ]
+    },
+    {
+      "order": "after-fix",
+      "swap_after_step": 0,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon binds host:/srv/ro on a private stub",
+        "container swaps /vol/a and /vol/b",
+        "daemon makes the stub read-only; flag lands on host:/srv/ro",
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon moves the finished mount onto the descriptor (MS_MOVE)"
+      ]
+    },
+    {
+      "order": "after-fix",
+      "swap_after_step": 1,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon binds host:/srv/ro on a private stub",
+        "daemon makes the stub read-only; flag lands on host:/srv/ro",
+        "container swaps /vol/a and /vol/b",
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon moves the finished mount onto the descriptor (MS_MOVE)"
+      ]
+    },
+    {
+      "order": "after-fix",
+      "swap_after_step": 2,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon binds host:/srv/ro on a private stub",
+        "daemon makes the stub read-only; flag lands on host:/srv/ro",
+        "daemon opens /vol/b/ro by descriptor",
+        "container swaps /vol/a and /vol/b",
+        "daemon moves the finished mount onto the descriptor (MS_MOVE)"
+      ]
+    },
+    {
+      "order": "after-fix",
+      "swap_after_step": 3,
+      "ro_source_writable": false,
+      "decoy_made_readonly": false,
+      "trace": [
+        "daemon binds host:/srv/ro on a private stub",
+        "daemon makes the stub read-only; flag lands on host:/srv/ro",
+        "daemon opens /vol/b/ro by descriptor",
+        "daemon moves the finished mount onto the descriptor (MS_MOVE)",
+        "container swaps /vol/a and /vol/b"
+      ]
+    }
+  ]
+}
